@@ -17,15 +17,18 @@ public class User {
     private String userName;
     private String lastName;
     private int age;
+    private String userEmail;
+
 
     public User() {
     }
 
-    public User(long userId, String userName, String lastName, int age) {
+    public User(long userId, String userName, String lastName, int age,String userEmail) {
         this.userId = userId;
         this.userName = userName;
         this.lastName = lastName;
         this.age = age;
+        this.userEmail = userEmail;
     }
 
     public long getUserId() {
@@ -58,6 +61,14 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
     @Override
