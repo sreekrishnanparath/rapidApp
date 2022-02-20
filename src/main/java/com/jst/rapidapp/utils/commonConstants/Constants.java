@@ -18,4 +18,12 @@ public class Constants {
             this.value = value;
         }
     };
+
+    public enum ActionTypes {
+        CLEAR(1), SAVE(2);
+        private int value;
+        private ActionTypes(int value) {
+            this.value = value;
+        }
+    };
 }

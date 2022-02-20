@@ -41,10 +41,12 @@ public class ModuleAttributes {
     @CreatedBy
     private long createdBy;
 
+    private int action;
+
     public ModuleAttributes() {
     }
 
-    public ModuleAttributes(long attributeId, long companyId, long moduleMasterId, String attrDesc,int inputControlType, int attrType, int attrLength, String style, String status, boolean isActive, Timestamp createdDate, long createdBy) {
+    public ModuleAttributes(long attributeId, long companyId, long moduleMasterId, String attrDesc,int inputControlType, int attrType, int attrLength, String style, String status, boolean isActive, Timestamp createdDate, long createdBy,int action) {
         this.attributeId = attributeId;
         this.companyId = companyId;
         this.moduleMasterId = moduleMasterId;
@@ -57,6 +59,15 @@ public class ModuleAttributes {
         this.isActive = isActive;
         this.createdDate = createdDate;
         this.createdBy = createdBy;
+        this.action = action;
+    }
+
+    public int getAction() {
+        return action;
+    }
+
+    public void setAction(int action) {
+        this.action = action;
     }
 
     public long getAttributeId() {
