@@ -16,4 +16,5 @@ public interface UserService {
     public User findUserMasterById(long id);
     public List<User> findUserByCompanyId(long id);
     public User findUserByEmailId(String userEmail);
+    public User findUserByEmailIdAndPassword(String userEmail,String password);
 }

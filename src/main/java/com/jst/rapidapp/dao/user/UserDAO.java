@@ -30,4 +30,8 @@ public class UserDAO {
         return userRepository.findByUserEmail(userEmail);
     }
 
+    public User getUserByEmailAndPassword(String userEmail,String password){
+        return userRepository.findUserByUserEmailAndPassword(userEmail,password);
+    }
+
 }

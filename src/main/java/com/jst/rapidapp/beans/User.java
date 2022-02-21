@@ -16,19 +16,40 @@ public class User {
     private long userId;
     private String userName;
     private String lastName;
+    private String password;
     private int age;
     private String userEmail;
+    //0-individual 1-cooperate
+    private int userType;
 
 
     public User() {
     }
 
-    public User(long userId, String userName, String lastName, int age,String userEmail) {
+    public User(long userId, String userName, String lastName, int age,String userEmail,int userType,String password) {
         this.userId = userId;
         this.userName = userName;
         this.lastName = lastName;
         this.age = age;
         this.userEmail = userEmail;
+        this.userType = userType;
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getUserType() {
+        return userType;
+    }
+
+    public void setUserType(int userType) {
+        this.userType = userType;
     }
 
     public long getUserId() {

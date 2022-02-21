@@ -29,7 +29,7 @@ public class RapidappApplicationUserTests {
 
 	@Test
 	public void testUserService_userLogin(){
-		User user = new User(1,"hari","krishnan",29,"abc@g.com");
+		User user = new User(1,"hari","krishnan",29,"abc@g.com",0,"123");
 		when(userDAO.getUserByEmail("abc@g.com")).thenReturn(user);
 		User resultData = userServiceImpl.findUserByEmailId("abc@g.com");
 		System.out.println(resultData);

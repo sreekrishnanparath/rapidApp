@@ -16,11 +16,11 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/welcome")
-    public ResponseEntity<User> getTestData() {
-        User user = new User(1, "Sree", "Krishnan", 29,"");
-        return new ResponseEntity<User>(user, HttpStatus.OK);
-    }
+//    @GetMapping("/welcome")
+//    public ResponseEntity<User> getTestData() {
+//        User user = new User(1, "Sree", "Krishnan", 29,"");
+//        return new ResponseEntity<User>(user, HttpStatus.OK);
+//    }
 
     @PostMapping("/create")
     public ResponseEntity<User> saveUser(@RequestBody User user){
@@ -46,6 +46,15 @@ public class UserController {
             return new ResponseEntity<User>(user,HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<User>(user,HttpStatus.OK);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<User> doLogin(@RequestBody User user){
+        User userResponse = userService.findUserByEmailIdAndPassword(user.getUserEmail(),user.getPassword());
+        if(userResponse==null){
+            return new ResponseEntity<User>(userResponse,HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<User>(userResponse,HttpStatus.OK);
     }
 
 }

@@ -52,4 +52,9 @@ public class UserServiceImpl implements UserService {
     public User findUserByEmailId(String userEmail) {
         return userDAO.getUserByEmail(userEmail);
     }
+
+    @Override
+    public User findUserByEmailIdAndPassword(String userEmail, String password) {
+        return userDAO.getUserByEmailAndPassword(userEmail,password);
+    }
 }
