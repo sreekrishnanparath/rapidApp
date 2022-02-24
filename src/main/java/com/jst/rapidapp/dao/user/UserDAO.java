@@ -33,5 +33,25 @@ public class UserDAO {
     public User getUserByEmailAndPassword(String userEmail,String password){
         return userRepository.findUserByUserEmailAndPassword(userEmail,password);
     }
+    //delete user by id
+    public void deleteUserById(long userId)
+    {
+        userRepository.deleteById(userId);
+    }
+    //find all user
+    public List<User> getUsers()
+    {
+        return userRepository.findAll();
+    }
+    //will only update firstname and lastname
+    public User updateUser(User user,long userId)
+    {
+        User existUser = userRepository.findById(userId);
+        existUser.setUserName(user.getUserName());
+        existUser.setLastName(user.getLastName());
+        userRepository.saveAndFlush(existUser);
+        System.out.println("existUser::"+existUser);
+        return existUser;
+    }
 
 }

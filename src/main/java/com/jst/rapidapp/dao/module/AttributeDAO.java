@@ -2,6 +2,7 @@ package com.jst.rapidapp.dao.module;
 
 
 import com.jst.rapidapp.beans.ModuleAttributes;
+import com.jst.rapidapp.beans.ModuleMaster;
 import com.jst.rapidapp.repository.module.AttributeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -25,5 +26,23 @@ public class AttributeDAO {
 
     public List<ModuleAttributes> getModuleAttributeByModuleMasterId(long id){
         return moduleAttributeRepository.findByModuleMasterId(id);
+    }
+    //get all the attribute
+    public List <ModuleAttributes> getAllAttribute() {
+        return moduleAttributeRepository.findAll();
+    }
+
+    //update attribute (only attribute desc)
+    public ModuleAttributes updateAttribute(long attributeId, ModuleAttributes moduleAttributes) {
+        ModuleAttributes existingModuleAttributes = moduleAttributeRepository.findById(attributeId);
+        existingModuleAttributes.setAttrDesc(moduleAttributes.getAttrDesc());
+
+        moduleAttributeRepository.saveAndFlush(existingModuleAttributes);
+        return existingModuleAttributes;
+    }
+    //delete attribute by id
+    public void deleteAttributeById (long attributeId)
+    {
+        moduleAttributeRepository.deleteById(attributeId);
     }
 }

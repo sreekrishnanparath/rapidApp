@@ -27,4 +27,22 @@ public class ModuleDAO {
     public List<ModuleMaster> getModuleAttributeByCompanyId(long id){
         return moduleRepository.findByCompanyId(id);
     }
+    //delete module by id
+    public void deleteModuleById(long id){
+        moduleRepository.deleteById(id);
+    }
+    //get all module
+    public List<ModuleMaster> getAllModules()
+    {
+        return moduleRepository.findAll();
+    }
+    //update module (only able to update status and module description)
+    public ModuleMaster updateModule(long id, ModuleMaster module)
+    {
+        ModuleMaster exisingModule = moduleRepository.findById(id);
+        exisingModule.setModuleDesc(module.getModuleDesc());
+        exisingModule.setStatus(module.getStatus());
+        return moduleRepository.saveAndFlush(exisingModule);
+
+    }
 }

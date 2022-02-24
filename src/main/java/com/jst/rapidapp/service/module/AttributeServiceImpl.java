@@ -46,5 +46,19 @@ public class AttributeServiceImpl implements AttributeService{
         return attributeDAO.getModuleAttributeByModuleMasterId(id);
     }
 
+    @Override
+    public List <ModuleAttributes> getAllAttribute() {
+        return attributeDAO.getAllAttribute();
+    }
+
+    @Override
+    public ModuleAttributes updateAttribute(long attributeId, ModuleAttributes moduleAttributes) {
+        return attributeDAO.updateAttribute(attributeId,moduleAttributes);
+    }
+    @Override
+    public void deleteAttributeById(long id)
+    {
+        attributeDAO.deleteAttributeById(id);
+    }
 
 }

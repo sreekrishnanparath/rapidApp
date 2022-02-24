@@ -3,6 +3,7 @@ package com.jst.rapidapp.controllers.modules;
 
 import com.jst.rapidapp.beans.ModuleAttributes;
 import com.jst.rapidapp.beans.ModuleMaster;
+import com.jst.rapidapp.beans.User;
 import com.jst.rapidapp.service.module.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,5 +37,21 @@ public class ModuleController {
         System.out.println(companyId);
         List<ModuleMaster> moduleMasters = moduleService.findModuleByCompanyId(companyId);
         return new ResponseEntity<List<ModuleMaster>>(moduleMasters,HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{moduleId}")
+    public ResponseEntity<String> deleteModule(@PathVariable long moduleId) {
+        moduleService.deleteModule(moduleId);
+        return new ResponseEntity<String>("Sucessfully deleted",HttpStatus.OK);
+    }
+    @GetMapping("/modules")
+    public ResponseEntity <List<ModuleMaster>> getAllUModules(){
+        return new ResponseEntity<List<ModuleMaster>>(moduleService.getAllModules(),HttpStatus.OK);
+    }
+
+    @PutMapping("/update/{moduleId}")
+    public  ResponseEntity<ModuleMaster> updateUser(@PathVariable long moduleId,@RequestBody ModuleMaster module)
+    {
+        return new ResponseEntity<ModuleMaster>(moduleService.updateModule(moduleId,module), HttpStatus.OK);
     }
 }
