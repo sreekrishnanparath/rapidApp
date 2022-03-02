@@ -15,4 +15,7 @@ public interface AttributeService {
     public List<ModuleAttributes> getAllModuleAttribute();
     public ModuleAttributes findModuleAttributeById(long id);
     public List<ModuleAttributes> findModuleAttributeByModuleMasterId(long id);
+    public List <ModuleAttributes> getAllAttribute();
+    public ModuleAttributes updateAttribute(long attributeId,ModuleAttributes moduleAttributes);
+    public void deleteAttributeById(long id);
 }

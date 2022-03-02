@@ -9,7 +9,7 @@ import com.jst.rapidapp.service.module.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.*;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -57,4 +57,21 @@ public class UserServiceImpl implements UserService {
     public User findUserByEmailIdAndPassword(String userEmail, String password) {
         return userDAO.getUserByEmailAndPassword(userEmail,password);
     }
+    @Override
+    public List<User>  getAllUsers()
+    {
+        return userDAO.getUsers();
+    }
+    @Override
+    public void deleteUserById(long id) {
+        userDAO.deleteUserById(id);
+    }
+    @Override
+    public User updateUser(User user,long userId) {
+        return userDAO.updateUser(user,userId);
+    }
+
+
+
+
 }

@@ -2,10 +2,8 @@ package com.jst.rapidapp.controllers.modules;
 
 
 import com.jst.rapidapp.beans.ModuleAttributes;
-import com.jst.rapidapp.beans.ModuleMaster;
+
 import com.jst.rapidapp.service.module.AttributeService;
-import com.jst.rapidapp.service.module.AttributeServiceImpl;
-import com.jst.rapidapp.service.module.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,4 +36,21 @@ public class AttributeController {
         List<ModuleAttributes> attributes = attributeService.findModuleAttributeByModuleMasterId(moduleMasterId);
         return new ResponseEntity<List<ModuleAttributes>>(attributes, HttpStatus.OK);
     }
+    @DeleteMapping("/delete/{attributeId}")
+    public ResponseEntity<String> deleteModule(@PathVariable long attributeId) {
+        attributeService.deleteAttributeById(attributeId);
+
+        return new ResponseEntity<String>("Sucessfully deleted",HttpStatus.OK);
+
+    }
+    @GetMapping("/attributes")
+    public ResponseEntity <List<ModuleAttributes>> getAllUModules(){
+        return new ResponseEntity<List<ModuleAttributes>>(attributeService.getAllAttribute(),HttpStatus.OK);
+    }
+    @PutMapping("/update/{attributeId}")
+    public  ResponseEntity<ModuleAttributes> updateModuleAttribute(@PathVariable long attributeId,@RequestBody ModuleAttributes moduleAttributes)
+    {
+        return new ResponseEntity<ModuleAttributes>(attributeService.updateAttribute(attributeId,moduleAttributes), HttpStatus.OK);
+    }
+
 }

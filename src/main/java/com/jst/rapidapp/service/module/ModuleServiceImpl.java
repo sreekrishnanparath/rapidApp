@@ -43,4 +43,20 @@ public class ModuleServiceImpl implements ModuleService{
     public List<ModuleMaster> findModuleByCompanyId(long id) {
         return moduleDAO.getModuleAttributeByCompanyId(id);
     }
+
+    @Override
+    public void deleteModule(long moduleId) {
+        moduleDAO.deleteModuleById(moduleId);
+    }
+
+    @Override
+    public List<ModuleMaster> getAllModules() {
+        return moduleDAO.getAllModules();
+    }
+
+    @Override
+    public ModuleMaster updateModule(long id,ModuleMaster module) {
+        return moduleDAO.updateModule(id,module);
+    }
+
 }

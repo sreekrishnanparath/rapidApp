@@ -16,4 +16,8 @@ public interface ModuleService {
     public List<ModuleMaster> getAllModuleMaster();
     public ModuleMaster findModuleMasterById(long id);
     public List<ModuleMaster> findModuleByCompanyId(long id);
+    public void deleteModule(long id);
+    public List<ModuleMaster> getAllModules();
+    public ModuleMaster updateModule(long id,ModuleMaster module);
+
 }
