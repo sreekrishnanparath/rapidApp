@@ -1,5 +1,6 @@
 package com.jst.rapidapp.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +17,11 @@ public class User {
     private long userId;
     private String userName;
     private String lastName;
+
+
+
     private String password;
+
     private int age;
     private String userEmail;
     //0-individual 1-cooperate

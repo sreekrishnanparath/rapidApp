@@ -50,10 +50,12 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<User> doLogin(@RequestBody User user){
+        System.out.println(user);
         User userResponse = userService.findUserByEmailIdAndPassword(user.getUserEmail(),user.getPassword());
         if(userResponse==null){
             return new ResponseEntity<User>(userResponse,HttpStatus.NOT_FOUND);
         }
+        System.out.println(userResponse);
         return new ResponseEntity<User>(userResponse,HttpStatus.OK);
     }
 

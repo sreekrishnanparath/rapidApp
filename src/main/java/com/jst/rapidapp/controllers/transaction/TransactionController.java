@@ -2,15 +2,19 @@ package com.jst.rapidapp.controllers.transaction;
 
 
 import com.jst.rapidapp.beans.Company;
+import com.jst.rapidapp.beans.GenericRetResponse;
 import com.jst.rapidapp.beans.RapidTransactions;
 import com.jst.rapidapp.repository.company.CompanyRepository;
 import com.jst.rapidapp.service.transaction.TransactionService;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/rapidapp/trans/")
@@ -20,9 +24,17 @@ public class TransactionController {
     TransactionService transactionService;
 
     @PostMapping("/create")
-    public ResponseEntity<RapidTransactions> saveCompany(@RequestBody RapidTransactions rapidTransactions){
-        RapidTransactions rapidTransactionResponse = transactionService.createTransaction(rapidTransactions);
-        return new ResponseEntity<RapidTransactions>(rapidTransactionResponse,HttpStatus.CREATED);
+    public ResponseEntity<GenericRetResponse> saveCompany(@RequestBody RapidTransactions rapidTransactions){
+        System.out.println("rapidTransactions##"+rapidTransactions);
+        GenericRetResponse retResponse;
+        try {
+            RapidTransactions rapidTransactionResponse = transactionService.createTransaction(rapidTransactions);
+            retResponse = new GenericRetResponse("","SUCCESS",rapidTransactionResponse.toString(),"");
+        }catch (Exception e){
+            retResponse = new GenericRetResponse("","FAIL",e.getMessage(),"");
+
+        }
+        return new ResponseEntity<GenericRetResponse>(retResponse,HttpStatus.CREATED);
     }
 
     @PostMapping("/{transId}")
@@ -44,8 +56,13 @@ public class TransactionController {
     }
 
     @PostMapping("/comMod/{companyId}/{moduleMasterId}")
-    public ResponseEntity<List<RapidTransactions>> getTransactionByCompanyIdAndModuleMasterId(@PathVariable long companyId,@PathVariable long moduleMasterId){
+    public ResponseEntity<List<Map<String, String>>> getTransactionByCompanyIdAndModuleMasterId(@PathVariable long companyId, @PathVariable long moduleMasterId){
         List<RapidTransactions> rapidTransactions = transactionService.findByCompanyIdAndModuleMasterId(companyId,moduleMasterId);
-        return new ResponseEntity<List<RapidTransactions>>(rapidTransactions,HttpStatus.OK);
+        List<Map<String, String>> result = new ArrayList<>();
+        for (RapidTransactions one:
+                rapidTransactions) {
+            result.add(one.getResultData());
+        }
+        return new ResponseEntity<List<Map<String, String>>>(result,HttpStatus.OK);
     }
 }
