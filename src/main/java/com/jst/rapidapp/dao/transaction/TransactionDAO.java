@@ -5,9 +5,12 @@ import com.jst.rapidapp.beans.ModuleMaster;
 import com.jst.rapidapp.beans.RapidTransactions;
 import com.jst.rapidapp.repository.module.ModuleRepository;
 import com.jst.rapidapp.repository.transaction.TransactionRepository;
+import com.jst.rapidapp.utils.commonConstants.mail.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
+import javax.mail.MessagingException;
 import java.util.List;
 
 @Component
@@ -16,9 +19,18 @@ public class TransactionDAO {
     @Autowired
     TransactionRepository transactionRepository;
 
+    @Autowired
+    EmailService emailService;
+
 
     public RapidTransactions saveTransaction(RapidTransactions transactions) {
-        return transactionRepository.saveAndFlush(transactions);
+        RapidTransactions createdTransaction = transactionRepository.saveAndFlush(transactions);
+//        try {
+//            emailService.sendEmail("Rapid App Transaction",createdTransaction);
+//        } catch (MessagingException e) {
+//            e.printStackTrace();
+//        }
+        return createdTransaction;
     }
 
     public RapidTransactions getTransactionById(long id) {
@@ -36,4 +48,6 @@ public class TransactionDAO {
     public List<RapidTransactions> getTransactionByCompanyIdAndModuleMasterId(long companyId,long moduleMasterId) {
         return transactionRepository.findByCompanyIdAndModuleMasterId(companyId,moduleMasterId);
     }
+
+
 }

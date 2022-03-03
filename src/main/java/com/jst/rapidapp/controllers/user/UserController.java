@@ -2,12 +2,13 @@ package com.jst.rapidapp.controllers.user;
 
 
 import com.jst.rapidapp.beans.User;
-import com.jst.rapidapp.repository.user.UserRepository;
 import com.jst.rapidapp.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/rapidapp/user")
@@ -28,15 +29,15 @@ public class UserController {
         return new ResponseEntity<User>(userResponse,HttpStatus.CREATED);
     }
 
-//    @GetMapping("/{userId}")
-//    public ResponseEntity<User> getUserById(@PathVariable long userId){
-//        System.out.println("User##"+userId);
-//        User user = userService.findUserMasterById(userId);
-//        if(user==null){
-//            return new ResponseEntity<User>(user,HttpStatus.NOT_FOUND);
-//        }
-//        return new ResponseEntity<User>(user,HttpStatus.OK);
-//    }
+    @GetMapping("/{userId}")
+    public ResponseEntity<User> getUserById(@PathVariable long userId){
+        System.out.println("User##"+userId);
+        User user = userService.findUserMasterById(userId);
+        if(user==null){
+            return new ResponseEntity<User>(user,HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<User>(user,HttpStatus.OK);
+    }
 
     @GetMapping("/{userEmail}")
     public ResponseEntity<User> getUserByEmailId(@PathVariable String userEmail){
@@ -50,11 +51,32 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<User> doLogin(@RequestBody User user){
+        System.out.println(user);
         User userResponse = userService.findUserByEmailIdAndPassword(user.getUserEmail(),user.getPassword());
         if(userResponse==null){
             return new ResponseEntity<User>(userResponse,HttpStatus.NOT_FOUND);
         }
+        System.out.println(userResponse);
         return new ResponseEntity<User>(userResponse,HttpStatus.OK);
     }
 
+    @DeleteMapping("/delete/{userId}")
+    public ResponseEntity<String> deleteUser(@PathVariable long userId) {
+        userService.deleteUserById(userId);
+//        List<User> users = userService.getAllUsers();
+        return new ResponseEntity<String>("Sucessfully deleted",HttpStatus.OK);
+    }
+    @GetMapping("/users")
+    public ResponseEntity <List<User>> getAllUsers(){
+//        System.out.println("get all user");
+//        System.out.println(userService.getAllUsers());
+        return new ResponseEntity<List<User>>(userService.getAllUsers(),HttpStatus.OK);
+    }
+
+    @PutMapping("/update/{userId}")
+    public  ResponseEntity<User> updateUser(@RequestBody User user,@PathVariable long userId)
+    {
+//        System.out.println(user);
+            return new ResponseEntity<User>(userService.updateUser(user, userId), HttpStatus.OK);
+    }
 }

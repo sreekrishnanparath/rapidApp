@@ -118,4 +118,17 @@ public class RapidTransactions implements Serializable {
         this.status = status;
         this.createdBy = createdBy;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "transId=" + transId +
+                ", companyId=" + companyId +
+                ", moduleMasterId=" + moduleMasterId +
+                ", createdDate=" + createdDate +
+                ", status='" + status + '\'' +
+                ", createdBy=" + createdBy +
+                ", resultData=" + resultData +
+                '}';
+    }
 }
