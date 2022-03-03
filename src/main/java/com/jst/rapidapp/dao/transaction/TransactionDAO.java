@@ -25,11 +25,11 @@ public class TransactionDAO {
 
     public RapidTransactions saveTransaction(RapidTransactions transactions) {
         RapidTransactions createdTransaction = transactionRepository.saveAndFlush(transactions);
-        try {
-            emailService.sendEmail("Rapid App Transaction",createdTransaction);
-        } catch (MessagingException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            emailService.sendEmail("Rapid App Transaction",createdTransaction);
+//        } catch (MessagingException e) {
+//            e.printStackTrace();
+//        }
         return createdTransaction;
     }
 
