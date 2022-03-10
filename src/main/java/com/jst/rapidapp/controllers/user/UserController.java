@@ -29,7 +29,7 @@ public class UserController {
         return new ResponseEntity<User>(userResponse,HttpStatus.CREATED);
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/id/{userId}")
     public ResponseEntity<User> getUserById(@PathVariable long userId){
         System.out.println("User##"+userId);
         User user = userService.findUserMasterById(userId);

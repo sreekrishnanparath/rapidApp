@@ -7,6 +7,7 @@ import com.jst.rapidapp.dao.module.ModuleDAO;
 import com.jst.rapidapp.dao.user.UserDAO;
 import com.jst.rapidapp.service.module.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -17,9 +18,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDAO userDAO;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
 
     @Override
     public User createUserMaster(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userDAO.saveUserMaster(user);
     }
 
