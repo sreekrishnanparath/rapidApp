@@ -1,37 +1,42 @@
 package com.jst.rapidapp.beans;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class User {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private long userId;
     private String userName;
     private String lastName;
 
-
-
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     private int age;
     private String userEmail;
+
     //0-individual 1-cooperate
     private int userType;
+
+    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Set<Role> roles = new HashSet<>();
 
 
     public User() {
     }
 
-    public User(long userId, String userName, String lastName, int age,String userEmail,int userType,String password) {
+    public User(long userId, String userName, String lastName, int age, String userEmail, int userType, String password) {
         this.userId = userId;
         this.userName = userName;
         this.lastName = lastName;
@@ -39,6 +44,14 @@ public class User {
         this.userEmail = userEmail;
         this.userType = userType;
         this.password = password;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     public String getPassword() {
@@ -85,8 +98,9 @@ public class User {
         return age;
     }
 
-    public void setAge(int age) {
+    public User setAge(int age) {
         this.age = age;
+        return null;
     }
 
     public String getUserEmail() {
@@ -103,7 +117,11 @@ public class User {
                 "userId=" + userId +
                 ", userName='" + userName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
                 ", age=" + age +
+                ", userEmail='" + userEmail + '\'' +
+                ", userType=" + userType +
+                ", roles=" + roles +
                 '}';
     }
 }
