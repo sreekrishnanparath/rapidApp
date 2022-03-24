@@ -4,11 +4,10 @@ package com.jst.rapidapp.beans;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedBy;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class ModuleAttributes {
@@ -43,10 +42,18 @@ public class ModuleAttributes {
 
     private int action;
 
+
+    private String attrDependency ;
+
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "lookup_ref_id")
+//    private LookupMaster attrDependency;
+
     public ModuleAttributes() {
     }
 
-    public ModuleAttributes(long attributeId, long companyId, long moduleMasterId, String attrDesc,int inputControlType, int attrType, int attrLength, String style, String status, boolean isActive, Timestamp createdDate, long createdBy,int action) {
+    public ModuleAttributes(long attributeId, long companyId, long moduleMasterId, String attrDesc,int inputControlType, int attrType, int attrLength, String style, String status, boolean isActive, Timestamp createdDate, long createdBy,int action,
+                            String attrDependency) {
         this.attributeId = attributeId;
         this.companyId = companyId;
         this.moduleMasterId = moduleMasterId;
@@ -60,6 +67,7 @@ public class ModuleAttributes {
         this.createdDate = createdDate;
         this.createdBy = createdBy;
         this.action = action;
+        this.attrDependency = attrDependency;
     }
 
     public int getAction() {
@@ -160,6 +168,14 @@ public class ModuleAttributes {
 
     public int getInputControlType() {
         return inputControlType;
+    }
+
+    public String getAttrDependency() {
+        return attrDependency;
+    }
+
+    public void setAttrDependency(String attrDependency) {
+        this.attrDependency = attrDependency;
     }
 
     public void setInputControlType(int inputControlType) {

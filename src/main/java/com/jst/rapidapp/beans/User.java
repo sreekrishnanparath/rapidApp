@@ -1,9 +1,6 @@
 package com.jst.rapidapp.beans;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -23,6 +20,7 @@ public class User {
 
     private int age;
     private String userEmail;
+
     //0-individual 1-cooperate
     private int userType;
 
@@ -100,8 +98,9 @@ public class User {
         return age;
     }
 
-    public void setAge(int age) {
+    public User setAge(int age) {
         this.age = age;
+        return null;
     }
 
     public String getUserEmail() {

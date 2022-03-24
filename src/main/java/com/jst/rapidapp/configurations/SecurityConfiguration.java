@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -62,7 +63,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             "/v3/api-docs/**",
             "/swagger-ui/**",
             // other public endpoints of your API may be appended to this array
-            "/rapidapp/login"
+            "/rapidapp/login",
+            "/rapidapp/**"
     };
 
     @Override
@@ -70,8 +72,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .cors().disable().csrf().disable()
                 .authorizeRequests()
+                //.antMatchers("/rapidapp/trans/comMod/**").permitAll()
                 .antMatchers(AUTH_WHITELIST).permitAll().anyRequest().authenticated()
-                //.antMatchers("/rapidapp/user/create").permitAll()
                 //.antMatchers("/rapidapp/role/create").permitAll().anyRequest().authenticated()
                 .and().exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntityPoint)
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -80,6 +82,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 
     }
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**");
+    }
+
 //    @Autowired
 //    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 //        auth
