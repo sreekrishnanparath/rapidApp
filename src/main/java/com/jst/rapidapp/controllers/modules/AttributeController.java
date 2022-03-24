@@ -31,7 +31,7 @@ public class AttributeController {
         return new ResponseEntity<ModuleAttributes>(attributes,HttpStatus.OK);
     }
 
-    @PostMapping("module/{moduleMasterId}")
+    @GetMapping("module/{moduleMasterId}")
     public ResponseEntity<List<ModuleAttributes>> getModuleAttributeByModuleMasterId(@PathVariable long moduleMasterId) {
         List<ModuleAttributes> attributes = attributeService.findModuleAttributeByModuleMasterId(moduleMasterId);
         return new ResponseEntity<List<ModuleAttributes>>(attributes, HttpStatus.OK);

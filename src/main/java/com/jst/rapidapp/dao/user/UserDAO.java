@@ -13,11 +13,13 @@ import java.util.List;
 @Component
 public class UserDAO {
 
+
     @Autowired
     UserRepository userRepository;
 
 
     public User saveUserMaster(User user){
+
         return userRepository.saveAndFlush(user);
     }
 
