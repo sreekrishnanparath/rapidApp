@@ -1,4 +1,4 @@
-package com.jst.rapidapp.utils.commonConstants;
+package com.jst.rapidapp.utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -2,7 +2,10 @@ package com.jst.rapidapp.controllers.user;
 
 
 import com.jst.rapidapp.beans.User;
+import com.jst.rapidapp.beans.configuration.GenericResponse;
+import com.jst.rapidapp.exception.NoDataFoundException;
 import com.jst.rapidapp.service.user.UserService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,20 +26,21 @@ public class UserController {
 //        return new ResponseEntity<User>(user, HttpStatus.OK);
 //    }
 
+    @Operation(summary = "User endpoint")
     @PostMapping("/create")
     public ResponseEntity<User> saveUser(@RequestBody User user){
         User userResponse = userService.createUserMaster(user);
         return new ResponseEntity<User>(userResponse,HttpStatus.CREATED);
     }
 
-    @GetMapping("/{userId}")
-    public ResponseEntity<User> getUserById(@PathVariable long userId){
+    @GetMapping("/id/{userId}")
+    public GenericResponse<User> getUserById(@PathVariable long userId){
         System.out.println("User##"+userId);
         User user = userService.findUserMasterById(userId);
         if(user==null){
-            return new ResponseEntity<User>(user,HttpStatus.NOT_FOUND);
+            throw new NoDataFoundException("User Not Found!");
         }
-        return new ResponseEntity<User>(user,HttpStatus.OK);
+        return new GenericResponse<User>(HttpStatus.CREATED,user,"");
     }
 
     @GetMapping("/{userEmail}")
@@ -44,7 +48,7 @@ public class UserController {
         System.out.println("User##"+userEmail);
         User user = userService.findUserByEmailId(userEmail);
         if(user==null){
-            return new ResponseEntity<User>(user,HttpStatus.NOT_FOUND);
+            throw new NoDataFoundException("User Not Found!");
         }
         return new ResponseEntity<User>(user,HttpStatus.OK);
     }
