@@ -1,8 +1,6 @@
 package com.jst.rapidapp.beans;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -12,25 +10,25 @@ import java.util.Set;
 public class User {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private long userId;
     private String userName;
     private String lastName;
 
-
-
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     private int age;
     private String userEmail;
+
     //0-individual 1-cooperate
     private int userType;
 
     @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(
             name = "users_roles",
-            joinColumns = @JoinColumn(name = "USER_ID"),
-            inverseJoinColumns = @JoinColumn(name = "ROLE_ID")
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> roles = new HashSet<>();
 
@@ -38,7 +36,7 @@ public class User {
     public User() {
     }
 
-    public User(long userId, String userName, String lastName, int age,String userEmail,int userType,String password) {
+    public User(long userId, String userName, String lastName, int age, String userEmail, int userType, String password) {
         this.userId = userId;
         this.userName = userName;
         this.lastName = lastName;
@@ -100,8 +98,9 @@ public class User {
         return age;
     }
 
-    public void setAge(int age) {
+    public User setAge(int age) {
         this.age = age;
+        return null;
     }
 
     public String getUserEmail() {
@@ -118,7 +117,11 @@ public class User {
                 "userId=" + userId +
                 ", userName='" + userName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
                 ", age=" + age +
+                ", userEmail='" + userEmail + '\'' +
+                ", userType=" + userType +
+                ", roles=" + roles +
                 '}';
     }
 }

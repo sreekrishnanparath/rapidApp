@@ -1,4 +1,4 @@
-package com.jst.rapidapp.utils.commonConstants;
+package com.jst.rapidapp.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;

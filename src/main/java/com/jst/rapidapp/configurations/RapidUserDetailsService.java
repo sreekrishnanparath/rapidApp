@@ -22,8 +22,8 @@ public class RapidUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String user) throws UsernameNotFoundException {
 
         List<SimpleGrantedAuthority> roles = null;
-        User userinfo = userRepository.findByUserEmail(user);
-
+        User userinfo = userRepository.findByUserName(user);
+        System.out.println("userinfo "+ userinfo);
         if(userinfo!=null) {
             return new RapidUserDetails(userinfo);
         }

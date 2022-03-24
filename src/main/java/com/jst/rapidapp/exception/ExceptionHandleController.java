@@ -13,17 +13,17 @@ public class ExceptionHandleController {
 
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<Object> handleAllExceptions(Exception ex) {
-        HttpStatus httpStatus = HttpStatus.NOT_FOUND;
+        HttpStatus httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
         ExceptionResponse exceptionResponse = new ExceptionResponse(ex.getMessage(),
                 httpStatus,
                 ZonedDateTime.now());
-        return new ResponseEntity(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity(exceptionResponse, httpStatus);
     }
 
     @ExceptionHandler(NoDataFoundException.class)
     public ResponseEntity<Object> handleNoDataFoundException(NoDataFoundException noDataFoundException) {
         HttpStatus httpStatus = HttpStatus.NOT_FOUND;
-        ExceptionResponse exceptionResponse = new ExceptionResponse("No Data Found",
+        ExceptionResponse exceptionResponse = new ExceptionResponse(noDataFoundException.getMessage(),
                 httpStatus,
                 ZonedDateTime.now());
         return new ResponseEntity<>(exceptionResponse, httpStatus);
