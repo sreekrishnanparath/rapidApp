@@ -49,6 +49,7 @@ public class UserDAO {
         User existUser = userRepository.findById(userId);
         existUser.setUserName(user.getUserName());
         existUser.setLastName(user.getLastName());
+        existUser.setPassword(user.getPassword());
         userRepository.saveAndFlush(existUser);
         System.out.println("existUser::"+existUser);
         return existUser;
