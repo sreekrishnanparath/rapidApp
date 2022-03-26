@@ -13,6 +13,8 @@ public class CompanyDao {
     CompanyRepository companyRepository;
     public Company createCompany(Company company)
     {
+        company.setActive(true);
+        company.setStatus("Created");
         return companyRepository.saveAndFlush(company);
     }
     public Company getCompanyById(long id)
