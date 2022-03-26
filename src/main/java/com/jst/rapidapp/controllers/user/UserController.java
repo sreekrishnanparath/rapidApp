@@ -29,6 +29,7 @@ public class UserController {
     @Operation(summary = "User endpoint")
     @PostMapping("/create")
     public ResponseEntity<User> saveUser(@RequestBody User user){
+        System.out.println("User## create"+user.getUserEmail());
         User userResponse = userService.createUserMaster(user);
         return new ResponseEntity<User>(userResponse,HttpStatus.CREATED);
     }
@@ -55,7 +56,8 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<User> doLogin(@RequestBody User user){
-        System.out.println(user);
+        System.out.println(user.getUserEmail());
+        System.out.println(user.getPassword());
         User userResponse = userService.findUserByEmailIdAndPassword(user.getUserEmail(),user.getPassword());
         if(userResponse==null){
             return new ResponseEntity<User>(userResponse,HttpStatus.NOT_FOUND);

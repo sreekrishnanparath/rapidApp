@@ -31,22 +31,23 @@ public class AttributeController {
         return new ResponseEntity<ModuleAttributes>(attributes,HttpStatus.OK);
     }
 
-    @PostMapping("module/{moduleMasterId}")
+    @GetMapping("module/{moduleMasterId}")
     public ResponseEntity<List<ModuleAttributes>> getModuleAttributeByModuleMasterId(@PathVariable long moduleMasterId) {
         List<ModuleAttributes> attributes = attributeService.findModuleAttributeByModuleMasterId(moduleMasterId);
         return new ResponseEntity<List<ModuleAttributes>>(attributes, HttpStatus.OK);
     }
+
     @DeleteMapping("/delete/{attributeId}")
     public ResponseEntity<String> deleteModule(@PathVariable long attributeId) {
         attributeService.deleteAttributeById(attributeId);
-
         return new ResponseEntity<String>("Sucessfully deleted",HttpStatus.OK);
-
     }
+
     @GetMapping("/attributes")
     public ResponseEntity <List<ModuleAttributes>> getAllUModules(){
         return new ResponseEntity<List<ModuleAttributes>>(attributeService.getAllAttribute(),HttpStatus.OK);
     }
+
     @PutMapping("/update/{attributeId}")
     public  ResponseEntity<ModuleAttributes> updateModuleAttribute(@PathVariable long attributeId,@RequestBody ModuleAttributes moduleAttributes)
     {
