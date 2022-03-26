@@ -26,17 +26,22 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     RapidUserDetailsService rapidUserDetailsService;
 
-    @Override
-    @Bean
-    protected AuthenticationManager authenticationManager() throws Exception {
-        return super.authenticationManager();
-    }
 
     @Autowired
     JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Autowired
     JwtAuthenticationEntityPoint jwtAuthenticationEntityPoint;
+
+
+
+
+    @Override
+    @Bean
+    protected AuthenticationManager authenticationManager() throws Exception {
+        return super.authenticationManager();
+    }
+
 
     @Bean
     public PasswordEncoder passwordEncoder(){
@@ -47,6 +52,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(rapidUserDetailsService).passwordEncoder(passwordEncoder());
     }
+
 
 
 
@@ -63,23 +69,20 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             "/v3/api-docs/**",
             "/swagger-ui/**",
             // other public endpoints of your API may be appended to this array
-            "/rapidapp/login",
-            "/rapidapp/**"
+            "/rapidapp/login"
+            //"/rapidapp/**"
     };
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .cors().disable().csrf().disable()
+        http.cors().and()
                 .authorizeRequests()
-                //.antMatchers("/rapidapp/trans/comMod/**").permitAll()
                 .antMatchers(AUTH_WHITELIST).permitAll().anyRequest().authenticated()
-                //.antMatchers("/rapidapp/role/create").permitAll().anyRequest().authenticated()
+                //.antMatchers("/marshal/login").permitAll().anyRequest().authenticated()
                 .and().exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntityPoint)
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .csrf().disable();
-
 
     }
 
