@@ -4,6 +4,7 @@ package com.jst.rapidapp.repository.lookup;
 
 import com.jst.rapidapp.beans.LookupMaster;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -17,7 +18,8 @@ public interface LookupRepository extends JpaRepository<LookupMaster, Long> {
 
     List<LookupMaster> findAllByLookRefIdIn(List<String> lookRefIds);
 
-    List<LookupMaster> findAll();
+    @Query("SELECT DISTINCT lookRefId FROM LookupMaster WHERE companyId  = :companyId")
+    List<String> findDistinctLookupRefs(long companyId);
 
     void deleteById(long id);
 
