@@ -11,7 +11,7 @@ public interface LookupService {
     public void deleteLookupMaster(long id);
     public LookupMaster getLookupMasterById(long id);
     public LookupMaster getLookupMasterByCompanyId(long companyId);
-    public List<LookupMaster> getAllLookupMaster();
+    public List<String> getAllLookupMasterRefByCompany(long companyId);
     public LookupMaster updateLookupMaster(long id,LookupMaster lookupMaster);
     public List<LookupMaster> getLookupMasterLookRefId(String lookRefId);
     public List<LookupMaster> getAllLookupMasterByLookRefIds(List<String> lookRefIds);

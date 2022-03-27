@@ -36,8 +36,8 @@ public class LookupDao {
     }
 
 
-    public List<LookupMaster> getAllLookupMaster() {
-        return lookupRepository.findAll();
+    public List<String> getAllLookupMasterRefByCompany(long companyId) {
+        return lookupRepository.findDistinctLookupRefs(companyId);
     }
 
 

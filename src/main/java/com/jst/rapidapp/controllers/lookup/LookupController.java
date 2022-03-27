@@ -35,10 +35,10 @@ public class LookupController {
         return new ResponseEntity<LookupMaster>(lookupMasterResponse,HttpStatus.OK);
     }
 
-    @GetMapping("/lookups")
-    public ResponseEntity <List<LookupMaster>> getAllLookupMaster(){
-        List<LookupMaster> lookupMasterResponse = lookupService.getAllLookupMaster();
-        return new ResponseEntity<List<LookupMaster>>(lookupMasterResponse,HttpStatus.OK);
+    @GetMapping("/lookups/{companyId}")
+    public ResponseEntity <List<String>> getAllLookupMaster(@PathVariable long companyId){
+        List<String> lookupMasterResponse = lookupService.getAllLookupMasterRefByCompany(companyId);
+        return new ResponseEntity<List<String>>(lookupMasterResponse,HttpStatus.OK);
     }
 
     @GetMapping("ref/{lookRefId}")
