@@ -31,7 +31,7 @@ public class LookupServiceImpl implements LookupService {
     }
 
     @Override
-    public LookupMaster getLookupMasterByCompanyId(long companyId) {
+    public List<LookupMaster> getLookupMasterByCompanyId(long companyId) {
         return lookupDAO.getLookupMasterByCompanyId(companyId);
     }
 
