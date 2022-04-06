@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -28,7 +29,7 @@ public class UserController {
 
     @Operation(summary = "User endpoint")
     @PostMapping("/create")
-    public ResponseEntity<User> saveUser(@RequestBody User user){
+    public ResponseEntity<User> saveUser(@Valid @RequestBody User user){
         System.out.println("User## create"+user.getUserEmail());
         User userResponse = userService.createUserMaster(user);
         return new ResponseEntity<User>(userResponse,HttpStatus.CREATED);

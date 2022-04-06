@@ -8,8 +8,10 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.MultiValueMap;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -20,7 +22,7 @@ public class CompanyController{
     CompanyService companyService;
 
     @PostMapping("/create")
-    public ResponseEntity<Company> saveCompany(@RequestBody Company company){
+    public ResponseEntity<Company> saveCompany(@Valid @RequestBody Company company){
         Company companyResponse = companyService.createCompany(company);
         return new ResponseEntity<Company>(companyResponse,HttpStatus.OK);
     }
@@ -36,7 +38,7 @@ public class CompanyController{
         return new ResponseEntity<List<Company>>(companyService.getAllCompanies(),HttpStatus.OK);
     }
     @PutMapping("/update/{companyId}")
-    public  ResponseEntity<Company> updateCompany(@PathVariable long companyId,@RequestBody  Company company)
+    public  ResponseEntity<Company> updateCompany(@PathVariable long companyId,@Valid @RequestBody  Company company)
     {
         return new ResponseEntity<Company>(companyService.updateCompany(companyId,company), HttpStatus.OK);
     }

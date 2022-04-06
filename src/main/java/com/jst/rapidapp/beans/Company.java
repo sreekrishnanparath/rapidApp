@@ -5,16 +5,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 @Entity
 public class Company {
 
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE)
     private long companyId;
-
+    @NotEmpty(message = "Company Name is required")
     private String companyName;
 
+    @NotEmpty(message = "User name is required")
     private String companyUser;
 
     private String status;
