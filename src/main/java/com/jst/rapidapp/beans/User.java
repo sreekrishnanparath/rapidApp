@@ -19,7 +19,7 @@ public class User {
     private String lastName;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @NotEmpty
+    @NotEmpty (message = "Email is required")
     private String password;
 
     @NotNull(message = "Age is required")
@@ -27,7 +27,7 @@ public class User {
     @Max(value = 100,message = "Age should not be greater than 100")
     private int age;
 
-    @NotEmpty
+    @NotEmpty (message = "Email is required")
     @Email(message = "Email format is incorrect")
     private String userEmail;
 
