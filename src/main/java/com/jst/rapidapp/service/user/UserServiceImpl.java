@@ -28,20 +28,6 @@ public class UserServiceImpl implements UserService {
         return userDAO.saveUserMaster(user);
     }
 
-    @Override
-    public User updateUserMaster(long id, User user) {
-        return null;
-    }
-
-    @Override
-    public void deleteUserMaster(long id) {
-
-    }
-
-    @Override
-    public List<User> getAllUserMaster() {
-        return null;
-    }
 
     @Override
     public User findUserMasterById(long id) {
@@ -73,6 +59,7 @@ public class UserServiceImpl implements UserService {
     }
     @Override
     public User updateUser(User user,long userId) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userDAO.updateUser(user,userId);
     }
 
