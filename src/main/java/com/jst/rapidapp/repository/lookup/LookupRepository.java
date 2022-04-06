@@ -23,7 +23,7 @@ public interface LookupRepository extends JpaRepository<LookupMaster, Long> {
 
     void deleteById(long id);
 
-    LookupMaster findByCompanyId(long companyId);
+    List<LookupMaster> findByCompanyIdOrderByLookRefId(long companyId);
 
     List<LookupMaster> findByLookRefId(String lookRefId);
 

@@ -10,7 +10,7 @@ public interface LookupService {
     public LookupMaster createLookupMaster (LookupMaster lookupMaster);
     public void deleteLookupMaster(long id);
     public LookupMaster getLookupMasterById(long id);
-    public LookupMaster getLookupMasterByCompanyId(long companyId);
+    public List<LookupMaster> getLookupMasterByCompanyId(long companyId);
     public List<String> getAllLookupMasterRefByCompany(long companyId);
     public LookupMaster updateLookupMaster(long id,LookupMaster lookupMaster);
     public List<LookupMaster> getLookupMasterLookRefId(String lookRefId);

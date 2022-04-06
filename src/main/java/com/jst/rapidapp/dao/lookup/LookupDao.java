@@ -17,6 +17,7 @@ public class LookupDao {
 
 
     public LookupMaster createLookupMaster(LookupMaster lookupMaster) {
+        lookupMaster.setStatus("CREATED");
         return lookupRepository.saveAndFlush(lookupMaster);
     }
 
@@ -31,8 +32,8 @@ public class LookupDao {
     }
 
 
-    public LookupMaster getLookupMasterByCompanyId(long companyId) {
-        return lookupRepository.findByCompanyId(companyId);
+    public List<LookupMaster> getLookupMasterByCompanyId(long companyId) {
+        return lookupRepository.findByCompanyIdOrderByLookRefId(companyId);
     }
 
 
