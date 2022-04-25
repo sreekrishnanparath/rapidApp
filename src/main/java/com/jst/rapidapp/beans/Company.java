@@ -1,10 +1,7 @@
 package com.jst.rapidapp.beans;
 
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.util.List;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 @Entity
@@ -13,6 +10,7 @@ public class Company {
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE)
     private long companyId;
+
     @NotEmpty(message = "Company Name is required")
     private String companyName;
 
@@ -22,6 +20,19 @@ public class Company {
     private String status;
 
     private boolean isActive;
+
+    @OneToMany(targetEntity = User.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "companyId_fk",referencedColumnName = "companyId")
+    private List<User> users;
+
+    @OneToMany(targetEntity = ModuleMaster.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "companyId_fk",referencedColumnName = "companyId")
+    private List<ModuleMaster> modulesMaster;
+
+    @OneToMany(targetEntity = ModuleAttributes.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "companyId_fk",referencedColumnName = "companyId")
+    private List<ModuleAttributes> moduleAttributes;
+
 
     public Company() {
     }

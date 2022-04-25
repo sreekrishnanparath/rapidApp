@@ -43,7 +43,6 @@ public class ModuleAttributes {
 
     private int action;
 
-
     private String attrDependency ;
 
 //    @OneToOne(cascade = CascadeType.ALL)

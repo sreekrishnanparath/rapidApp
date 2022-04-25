@@ -4,12 +4,11 @@ package com.jst.rapidapp.beans;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedBy;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.sql.Timestamp;
+import java.util.List;
+
 //tghompson
 @Entity
 public class ModuleMaster {
@@ -32,6 +31,9 @@ public class ModuleMaster {
     @CreatedBy
     private long createdBy;
 
+    @OneToMany(targetEntity = ModuleAttributes.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "moduleId_fk",referencedColumnName = "moduleId")
+    private List<ModuleAttributes> moduleAttributes;
     public ModuleMaster() {
     }
 
