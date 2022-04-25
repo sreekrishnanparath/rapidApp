@@ -2,6 +2,7 @@ package com.jst.rapidapp.beans;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name="lookup_master")

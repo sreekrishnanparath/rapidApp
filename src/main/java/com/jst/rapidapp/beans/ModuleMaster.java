@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 import java.sql.Timestamp;
 //tghompson
 @Entity
@@ -18,7 +19,7 @@ public class ModuleMaster {
     private long moduleId;
 
     private long companyId;
-
+    @NotEmpty(message = "Module Description is required")
     private String moduleDesc;
 
     private String status;

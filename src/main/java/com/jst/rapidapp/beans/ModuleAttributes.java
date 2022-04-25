@@ -5,6 +5,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedBy;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,7 +20,7 @@ public class ModuleAttributes {
     private long companyId;
 
     private long moduleMasterId;
-
+    @NotEmpty(message = "Atrribute's Description is required")
     private String attrDesc;
 
     private int inputControlType;
