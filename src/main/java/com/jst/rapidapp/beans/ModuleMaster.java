@@ -40,4 +40,15 @@ public class ModuleMaster {
     @JoinColumn(name = "moduleId_fk",referencedColumnName = "moduleId")
     private List<ModuleAttributes> moduleAttributes;
 
+    public ModuleMaster(long moduleId, long comapnyId, String moduleDesc, String status, boolean isActive, Timestamp createdDate, long createdBy) {
+        this.moduleId = moduleId;
+        this.companyId = comapnyId;
+        this.moduleDesc = moduleDesc;
+        this.status = status;
+        this.isActive = isActive;
+        this.createdDate = createdDate;
+        this.createdBy = createdBy;
+    }
+
+
 }
