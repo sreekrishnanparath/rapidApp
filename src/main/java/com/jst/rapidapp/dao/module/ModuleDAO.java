@@ -45,4 +45,12 @@ public class ModuleDAO {
         return moduleRepository.saveAndFlush(exisingModule);
 
     }
+    public boolean existModule (long moduleId){
+        ModuleMaster module= moduleRepository.findById(moduleId);
+        if(module ==null)
+        {
+            return false;
+        }
+        return true;
+    }
 }

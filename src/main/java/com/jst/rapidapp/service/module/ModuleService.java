@@ -19,5 +19,6 @@ public interface ModuleService {
     public void deleteModule(long id);
     public List<ModuleMaster> getAllModules();
     public ModuleMaster updateModule(long id,ModuleMaster module);
+    boolean existModule (long moduleId);
 
 }

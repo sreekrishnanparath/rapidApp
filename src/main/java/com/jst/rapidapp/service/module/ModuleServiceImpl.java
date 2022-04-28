@@ -59,4 +59,9 @@ public class ModuleServiceImpl implements ModuleService{
         return moduleDAO.updateModule(id,module);
     }
 
+    @Override
+    public boolean existModule(long moduleId) {
+        return moduleDAO.existModule(moduleId);
+    }
+
 }

@@ -22,4 +22,5 @@ public interface ModuleRepository extends JpaRepository<ModuleMaster, Long> {
     List <ModuleMaster> findAll();
 
     void deleteById(long id);
+
 }
