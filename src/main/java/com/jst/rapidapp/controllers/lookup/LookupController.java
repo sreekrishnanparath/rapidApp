@@ -31,7 +31,9 @@ public class LookupController {
 
     @PostMapping("/company/{companyId}")
     public ResponseEntity<List<LookupMaster>> getLookupMasterByCompanyId(@PathVariable long companyId){
+        System.out.println("/company/{companyId}"+companyId);
         List<LookupMaster> lookupMasterResponse = lookupService.getLookupMasterByCompanyId(companyId);
+        System.out.println("/company/{companyId}"+lookupMasterResponse);
         return new ResponseEntity<List<LookupMaster>>(lookupMasterResponse,HttpStatus.OK);
     }
 

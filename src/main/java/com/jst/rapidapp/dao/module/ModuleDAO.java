@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class ModuleDAO {
+public class    ModuleDAO {
 
     @Autowired
     ModuleRepository moduleRepository;
@@ -21,6 +21,7 @@ public class ModuleDAO {
     }
 
     public ModuleMaster getModuleMasterById(long id){
+
         return moduleRepository.findById(id);
     }
 

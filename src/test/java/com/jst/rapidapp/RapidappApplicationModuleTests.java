@@ -45,6 +45,13 @@ public class RapidappApplicationModuleTests {
 		assertEquals("New Survery Module 2",resultData.getModuleDesc());
 	}
 	@Test
+	public void test_getModuleById_WithNoIDExist(){
+		ModuleMaster module = new ModuleMaster(1,1,"New Survery Module 2","created",false,null,0);
+		when(moduleDAO.getModuleMasterById(1)).thenReturn(module);
+		ModuleMaster resultData = moduleServiceImpl.findModuleMasterById(1);
+		assertEquals(null,resultData.getModuleDesc());
+	}
+	@Test
 	public void test_getModulesByCompanyId() {
 		int companyId = 1;
 		List<ModuleMaster> listOfModule = new ArrayList<ModuleMaster>();
@@ -53,7 +60,7 @@ public class RapidappApplicationModuleTests {
 		listOfModule.add(new ModuleMaster(3,companyId,"Survey 3","created",false,null,0));
 		when(moduleDAO.getModuleAttributeByCompanyId(companyId)).thenReturn(listOfModule);
 		List<ModuleMaster> resultData = moduleServiceImpl.findModuleByCompanyId(companyId);
-		assertEquals(listOfModule,resultData);
+		assertEquals(resultData,listOfModule);
 	}
 	@Test
 	public void test_getAllModules() {
