@@ -15,6 +15,13 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Company {
 
+    public Company(long companyId, String companyName, String companyUser, String status, boolean isActive) {
+        this.companyId = companyId;
+        this.companyName = companyName;
+        this.companyUser = companyUser;
+        this.status = status;
+        this.isActive = isActive;
+    }
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE)
     private long companyId;

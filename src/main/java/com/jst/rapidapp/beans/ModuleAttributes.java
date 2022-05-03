@@ -12,7 +12,7 @@ import javax.validation.constraints.NotEmpty;
 import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
-@AllArgsConstructor
+
 @NoArgsConstructor
 @Data
 @Entity
@@ -53,5 +53,21 @@ public class ModuleAttributes {
 //    @OneToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "lookup_ref_id")
 //    private LookupMaster attrDependency;
-
+    public ModuleAttributes(long attributeId, long companyId, long moduleMasterId, String attrDesc,int inputControlType, int attrType, int attrLength, String style, String status, boolean isActive, Timestamp createdDate, long createdBy,int action,
+                            String attrDependency) {
+        this.attributeId = attributeId;
+        this.companyId = companyId;
+        this.moduleMasterId = moduleMasterId;
+        this.attrDesc = attrDesc;
+        this.inputControlType  = inputControlType;
+        this.attrType = attrType;
+        this.attrLength = attrLength;
+        this.style = style;
+        this.status = status;
+        this.isActive = isActive;
+        this.createdDate = createdDate;
+        this.createdBy = createdBy;
+        this.action = action;
+        this.attrDependency = attrDependency;
+    }
 }

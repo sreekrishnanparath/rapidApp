@@ -9,6 +9,7 @@ import com.jst.rapidapp.repository.module.ModuleRepository;
 import com.jst.rapidapp.repository.user.UserRepository;
 import com.jst.rapidapp.service.module.ModuleServiceImpl;
 import com.jst.rapidapp.service.user.UserServiceImpl;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -31,77 +32,95 @@ public class RapidappApplicationModuleTests {
 	@Mock
 	public ModuleDAO moduleDAO;
 
-	@Mock
-	public AttributeDAO attributeDAO;
-	@Mock
-	public ModuleRepository moduleRepository;
-
-
 	@Test
-	public void test_getModuleById(){
-		ModuleMaster module = new ModuleMaster(1,1,"New Survery Module 2","created",false,null,0);
+	public void test_getModuleById_ModuleExist(){
+		ModuleMaster module = new ModuleMaster(1,1,"New Survey Module 2","created",false,null,0);
 		when(moduleDAO.getModuleMasterById(1)).thenReturn(module);
 		ModuleMaster resultData = moduleServiceImpl.findModuleMasterById(1);
-		assertEquals("New Survery Module 2",resultData.getModuleDesc());
+		assertEquals("New Survey Module 2",resultData.getModuleDesc());
 	}
 	@Test
-	public void test_getModuleById_WithNoIDExist(){
-		ModuleMaster module = new ModuleMaster(1,1,"New Survery Module 2","created",false,null,0);
+	public void test_getModuleById_NoModuleExist(){
+		ModuleMaster module = new ModuleMaster(1,1,"New Survey Module 2","created",false,null,0);
 		when(moduleDAO.getModuleMasterById(1)).thenReturn(module);
-		ModuleMaster resultData = moduleServiceImpl.findModuleMasterById(1);
-		assertEquals(null,resultData.getModuleDesc());
+		ModuleMaster resultData = moduleServiceImpl.findModuleMasterById(2);
+		assertNull(null,resultData);
 	}
 	@Test
-	public void test_getModulesByCompanyId() {
+	public void test_getModulesByCompanyId_CompanyIdExist() {
+		int companyId = 1;
+		List<ModuleMaster> listOfModule = new ArrayList<ModuleMaster>();
+		listOfModule.add(new ModuleMaster(1,companyId,"Survey 1","created",false,null,0));
+		listOfModule.add(new ModuleMaster(2,companyId,"Survey 2","created",false,null,0));
+		listOfModule.add(new ModuleMaster(3,companyId,"Survey 3","created",false,null,0));
+		 ModuleMaster expectModule =new ModuleMaster(2,companyId,"Survey 2","created",false,null,0);
+		when(moduleDAO.getModuleAttributeByCompanyId(companyId)).thenReturn(listOfModule);
+		List<ModuleMaster> resultData = moduleServiceImpl.findModuleByCompanyId(companyId);
+		assertEquals(3,resultData.size());
+		assertEquals(expectModule,resultData.get(1));
+	}
+	@Test
+	public void test_getListOfModulesByCompanyId_NoCompanyIdExist() {
 		int companyId = 1;
 		List<ModuleMaster> listOfModule = new ArrayList<ModuleMaster>();
 		listOfModule.add(new ModuleMaster(1,companyId,"Survey 1","created",false,null,0));
 		listOfModule.add(new ModuleMaster(2,companyId,"Survey 2","created",false,null,0));
 		listOfModule.add(new ModuleMaster(3,companyId,"Survey 3","created",false,null,0));
 		when(moduleDAO.getModuleAttributeByCompanyId(companyId)).thenReturn(listOfModule);
-		List<ModuleMaster> resultData = moduleServiceImpl.findModuleByCompanyId(companyId);
-		assertEquals(resultData,listOfModule);
+		List<ModuleMaster> expectList = new ArrayList<ModuleMaster>();
+		List<ModuleMaster> resultData = moduleServiceImpl.findModuleByCompanyId(2);
+		assertEquals(0,resultData.size());
+		assertEquals(expectList,resultData);
 	}
+
 	@Test
-	public void test_getAllModules() {
+	public void test_getAllModules_dataExist() {
 		List<ModuleMaster> listOfModule = new ArrayList<ModuleMaster>();
 		listOfModule.add(new ModuleMaster(1,1,"Survey 1","created",false,null,0));
 		listOfModule.add(new ModuleMaster(2,2,"Survey 2","created",false,null,0));
 		listOfModule.add(new ModuleMaster(3,3,"Survey 3","created",false,null,0));
 		when(moduleDAO.getAllModules()).thenReturn(listOfModule);
 		List<ModuleMaster> resultData = moduleServiceImpl.getAllModules();
-		assertEquals(listOfModule,resultData);
+		assertEquals(3,resultData.size());
+	}
+	@Test
+	public void test_getAllModules_EmptyList() {
+		List<ModuleMaster> listOfModule = new ArrayList<ModuleMaster>();
+		when(moduleDAO.getAllModules()).thenReturn(listOfModule);
+		List<ModuleMaster> resultData = moduleServiceImpl.getAllModules();
+		assertEquals(true,resultData.isEmpty());
 	}
 	@Test
 	public void test_updateModuleDescription()
 	{
-		ModuleMaster module = new ModuleMaster(1,1,"Survery 2","created",false,null,0);
+		ModuleMaster module = new ModuleMaster(1,1,"Survey 2","created",false,null,0);
 		when(moduleDAO.updateModule(module.getModuleId(),module)).thenReturn(module);
-		//update description
 		module.setModuleDesc("New survery description");
-		when(moduleDAO.saveModuleMaster(module)).thenReturn(module);
 		ModuleMaster resultData = moduleServiceImpl.updateModule(1,module);
-		assertEquals(resultData,module);
+		assertEquals("New survery description",resultData.getModuleDesc());
 	}
 	@Test
 	public void test_updateModuleStatus()
 	{
-		ModuleMaster module = new ModuleMaster(1,1,"Survery 2","created",false,null,0);
+		ModuleMaster module = new ModuleMaster(1,1,"Survey 2","created",false,null,0);
 		when(moduleDAO.updateModule(module.getModuleId(),module)).thenReturn(module);
 		//update status
-		module.setStatus("created");
-		when(moduleDAO.updateModule(module.getModuleId(),module)).thenReturn(module);
+		module.setStatus("update");
 		ModuleMaster resultData = moduleServiceImpl.updateModule(1,module);
-		assertEquals(resultData,module);
+		System.out.println(resultData);
+		assertEquals("update",resultData.getStatus());
 	}
 	@Test
-	public void test_deleteModuleById()
+	public void test_CreateModule()
 	{
-		ModuleMaster module = new ModuleMaster(1,1,"Survery 3","created",false,null,0);
+		ModuleMaster module = new ModuleMaster(1,1,"Survey 3","created",false,null,0);
 
-		when(moduleDAO.getModuleMasterById(module.getModuleId())).thenReturn(module);
-		moduleDAO.deleteModuleById(1);
-		boolean resultData = moduleServiceImpl.existModule(1);
-		assertTrue(resultData==moduleDAO.existModule(1));
+		//CREATE MODULE
+		when(moduleDAO.saveModuleMaster(module)).thenReturn(module);
+		//CHECK DOES IT CREATE
+		ModuleMaster resultData =  moduleServiceImpl.createModuleMaster(module);
+		assertEquals(module,resultData);
+
+
 	}
 }
