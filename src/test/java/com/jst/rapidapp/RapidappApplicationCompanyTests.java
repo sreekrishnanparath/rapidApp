@@ -6,22 +6,21 @@ import com.jst.rapidapp.beans.ModuleMaster;
 import com.jst.rapidapp.beans.User;
 import com.jst.rapidapp.dao.comapany.CompanyDao;
 import com.jst.rapidapp.service.company.CompanyServiceImpl;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class RapidappApplicationCompanyTests {
 
 
@@ -33,8 +32,8 @@ public class RapidappApplicationCompanyTests {
 
     Company company ;
     Company simpleCompany;
-    List <Company> listOfCompany = new ArrayList<>();;
-    @Before
+    List <Company> listOfCompany = new ArrayList<>();
+    @BeforeEach
     public void setup()
     {
         List <User> users = new ArrayList<User>();
@@ -54,7 +53,7 @@ public class RapidappApplicationCompanyTests {
         listOfCompany.add(new Company(1,"Amazon","chris","created",true));
         listOfCompany.add(new Company(1,"Google","bob","created",true));
     }
-    @After
+    @AfterEach
     public void teardown()
     {
         company = null;

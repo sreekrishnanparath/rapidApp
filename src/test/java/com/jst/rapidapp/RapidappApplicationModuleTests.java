@@ -9,20 +9,19 @@ import com.jst.rapidapp.repository.module.ModuleRepository;
 import com.jst.rapidapp.repository.user.UserRepository;
 import com.jst.rapidapp.service.module.ModuleServiceImpl;
 import com.jst.rapidapp.service.user.UserServiceImpl;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
- import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class RapidappApplicationModuleTests {
 
 
@@ -43,8 +42,8 @@ public class RapidappApplicationModuleTests {
 	public void test_getModuleById_NoModuleExist(){
 		ModuleMaster module = new ModuleMaster(1,1,"New Survey Module 2","created",false,null,0);
 		when(moduleDAO.getModuleMasterById(1)).thenReturn(module);
-		ModuleMaster resultData = moduleServiceImpl.findModuleMasterById(2);
-		assertNull(null,resultData);
+		ModuleMaster resultData = moduleServiceImpl.findModuleMasterById(1);
+        assertEquals(null,resultData);
 	}
 	@Test
 	public void test_getModulesByCompanyId_CompanyIdExist() {

@@ -10,14 +10,14 @@ import com.jst.rapidapp.service.company.CompanyServiceImpl;
 import com.jst.rapidapp.service.module.AttributeService;
 import com.jst.rapidapp.service.module.AttributeService;
 import com.jst.rapidapp.service.module.AttributeServiceImpl;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import javax.print.attribute.Attribute;
 import java.sql.Timestamp;
@@ -26,10 +26,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
-
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class RapidappApplicationAttributeTests {
 
     @InjectMocks
@@ -40,7 +39,7 @@ public class RapidappApplicationAttributeTests {
 
     ModuleAttributes attribute ;
     List<ModuleAttributes> ListOfAttributes = new ArrayList<>();
-    @Before
+    @BeforeEach
     public void setup()
     {
         Date date = new Date();
@@ -51,7 +50,7 @@ public class RapidappApplicationAttributeTests {
         ListOfAttributes.add(new ModuleAttributes(3,1,1,"Button",1,1,1,"style","create",false,timestamp,1,1,"city"));
 
     }
-    @After
+    @AfterEach
     public void teardown()
     {
         ListOfAttributes = new ArrayList<>();

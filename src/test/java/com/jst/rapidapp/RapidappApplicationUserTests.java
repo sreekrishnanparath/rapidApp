@@ -5,23 +5,25 @@ import com.jst.rapidapp.beans.User;
 import com.jst.rapidapp.dao.user.UserDAO;
 import com.jst.rapidapp.repository.user.UserRepository;
 import com.jst.rapidapp.service.user.UserServiceImpl;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.util.AssertionErrors.assertNull;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class RapidappApplicationUserTests {
 
 	@Mock
@@ -98,7 +100,7 @@ public class RapidappApplicationUserTests {
 		User resultData = userServiceImpl.findUserByEmailIdAndPassword("asd@asd.com","asd");
 		assertNull(null,resultData);
 	}
-	@Ignore
+	@Disabled
 	@Test
 	public void test_updatePasswordAndPasswordShouldBeEncode()
 	{
