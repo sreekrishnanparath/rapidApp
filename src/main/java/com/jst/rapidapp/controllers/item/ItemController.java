@@ -24,8 +24,8 @@ public class ItemController {
 
     @PostMapping("/{productId}/items")
     public ResponseEntity<ItemMaster> saveItemMaster(@PathVariable long productId, @RequestBody ItemMaster itemMaster){
-        ProductMaster productMaster = productService.getProductMasterById(productId);
-        ItemMaster itemMasterResponse = itemService.createItemMaster(itemMaster, productMaster);
+
+        ItemMaster itemMasterResponse = itemService.createItemMaster(itemMaster, productId);
         return new ResponseEntity<ItemMaster>(itemMasterResponse,HttpStatus.OK);
     }
 

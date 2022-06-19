@@ -1,7 +1,7 @@
 package com.jst.rapidapp.service.company;
 
 import com.jst.rapidapp.beans.Company;
-import com.jst.rapidapp.dao.comapany.CompanyDao;
+import com.jst.rapidapp.dao.company.CompanyDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

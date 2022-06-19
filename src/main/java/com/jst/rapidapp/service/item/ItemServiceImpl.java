@@ -17,8 +17,8 @@ public class ItemServiceImpl implements ItemService {
     ItemDao itemDao;
 
     @Override
-    public ItemMaster createItemMaster(ItemMaster itemMaster, ProductMaster productMaster) {
-        return itemDao.createItemMaster(itemMaster, productMaster);
+    public ItemMaster createItemMaster(ItemMaster itemMaster, long productId) {
+        return itemDao.createItemMaster(itemMaster, productId);
     }
 
 
