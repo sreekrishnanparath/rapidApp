@@ -68,9 +68,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             // -- Swagger UI v3 (OpenAPI)
             "/v3/api-docs/**",
             "/swagger-ui/**",
-            // other public endpoints of your API may be appended to this array
-            "/rapidapp/login"
-            //"/rapidapp/trans/create"
+            "/rapidapp/login",
+            "/rapidapp/**",
+            "/vansales/**",
     };
 
     @Override
@@ -78,7 +78,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.cors().and()
                 .authorizeRequests()
                 .antMatchers(AUTH_WHITELIST).permitAll().anyRequest().authenticated()
-                 //.antMatchers("/rapidapp/trans/create").permitAll().anyRequest().authenticated()
+                //.antMatchers("/vansales/products").permitAll().anyRequest().authenticated()
                 .and().exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntityPoint)
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
