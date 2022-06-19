@@ -2,6 +2,7 @@ package com.jst.rapidapp.service.item;
 
 
 import com.jst.rapidapp.beans.ItemMaster;
+import com.jst.rapidapp.beans.ProductMaster;
 import com.jst.rapidapp.dao.item.ItemDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,8 +17,8 @@ public class ItemServiceImpl implements ItemService {
     ItemDao itemDao;
 
     @Override
-    public ItemMaster createItemMaster(ItemMaster productMaster) {
-        return itemDao.createItemMaster(productMaster);
+    public ItemMaster createItemMaster(ItemMaster itemMaster, ProductMaster productMaster) {
+        return itemDao.createItemMaster(itemMaster, productMaster);
     }
 
 

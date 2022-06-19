@@ -2,7 +2,9 @@ package com.jst.rapidapp.controllers.item;
 
 
 import com.jst.rapidapp.beans.ItemMaster;
+import com.jst.rapidapp.beans.ProductMaster;
 import com.jst.rapidapp.service.item.ItemService;
+import com.jst.rapidapp.service.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,9 +19,13 @@ public class ItemController {
     @Autowired
     ItemService itemService;
 
-    @PostMapping("/items")
-    public ResponseEntity<ItemMaster> saveItemMaster(@RequestBody ItemMaster itemMaster){
-        ItemMaster itemMasterResponse = itemService.createItemMaster(itemMaster);
+    @Autowired
+    ProductService productService;
+
+    @PostMapping("/{productId}/items")
+    public ResponseEntity<ItemMaster> saveItemMaster(@PathVariable long productId, @RequestBody ItemMaster itemMaster){
+        ProductMaster productMaster = productService.getProductMasterById(productId);
+        ItemMaster itemMasterResponse = itemService.createItemMaster(itemMaster, productMaster);
         return new ResponseEntity<ItemMaster>(itemMasterResponse,HttpStatus.OK);
     }
 
