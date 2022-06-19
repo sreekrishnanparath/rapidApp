@@ -1,4 +1,4 @@
-package com.jst.rapidapp.dao.comapany;
+package com.jst.rapidapp.dao.company;
 
 import com.jst.rapidapp.beans.Company;
 import com.jst.rapidapp.repository.company.CompanyRepository;

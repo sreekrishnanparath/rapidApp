@@ -12,19 +12,19 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name="invoice_header")
+@Table(name="invoice_details")
 public class InvoiceDetails {
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE)
     private long lineId ;
 
-    private long transId ;
+    private long transId ;//FK
 
     private Date transDt;
 
     private long itemId;
 
-    private long branchId;
+    private long branchId;//FK
 
     private double amount;
 
@@ -39,5 +39,6 @@ public class InvoiceDetails {
     private String status;
 
     private String statusBy;
+
 
 }
