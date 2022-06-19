@@ -31,10 +31,12 @@ public class ModuleMaster {
     @CreatedBy
     private long createdBy;
 
+    private long totalTrans;
+
     public ModuleMaster() {
     }
 
-    public ModuleMaster(long moduleId, long comapnyId, String moduleDesc, String status, boolean isActive, Timestamp createdDate, long createdBy) {
+    public ModuleMaster(long moduleId, long comapnyId, String moduleDesc, String status, boolean isActive, Timestamp createdDate, long createdBy, int totalTrans) {
         this.moduleId = moduleId;
         this.companyId = comapnyId;
         this.moduleDesc = moduleDesc;
@@ -42,6 +44,14 @@ public class ModuleMaster {
         this.isActive = isActive;
         this.createdDate = createdDate;
         this.createdBy = createdBy;
+        this.totalTrans = totalTrans;
+    }
+
+    public ModuleMaster(long comapnyId,long moduleId, String moduleDesc, long totalTrans) {
+        this.moduleId = moduleId;
+        this.moduleDesc = moduleDesc;
+        this.totalTrans = totalTrans;
+        this.companyId = comapnyId;
     }
 
     public long getModuleId() {
@@ -98,5 +108,13 @@ public class ModuleMaster {
 
     public void setCreatedBy(long createdBy) {
         this.createdBy = createdBy;
+    }
+
+    public long getTotalTrans() {
+        return totalTrans;
+    }
+
+    public void setTotalTrans(long totalTrans) {
+        this.totalTrans = totalTrans;
     }
 }

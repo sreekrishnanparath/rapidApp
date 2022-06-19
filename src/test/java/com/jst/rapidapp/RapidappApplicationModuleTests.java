@@ -33,7 +33,7 @@ public class RapidappApplicationModuleTests {
 
 	@Test
 	public void testModuleService_userLogin(){
-		ModuleMaster module = new ModuleMaster(3,1,"New Survery Module 2","created",false,null,0);
+		ModuleMaster module = new ModuleMaster(3,1,"New Survery Module 2","created",false,null,0,0);
 		when(moduleDAO.getModuleMasterById(1)).thenReturn(module);
 		ModuleMaster resultData = moduleServiceImpl.findModuleMasterById(1);
 		System.out.println(resultData);

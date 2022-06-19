@@ -1,0 +1,401 @@
+2022-03-27 11:36:20,888 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12h5m28s688ms540µs900ns).
+2022-03-27 11:37:23,662 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 11:37:23,666 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-03-27 11:37:23,674 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-03-27 17:10:17,943 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RapidappApplication using Java 11.0.8 on DESKTOP-1NEGNVM with PID 29880 (D:\Proffesional\Academics\DKIT\SOFTWARE PROJECT\rapidapp\target\classes started by sreek in D:\Proffesional\Academics\DKIT\SOFTWARE PROJECT\rapidapp)
+2022-03-27 17:10:17,956 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.1, Spring v5.3.13
+2022-03-27 17:10:17,956 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-27 17:10:18,131 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-27 17:10:18,132 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-27 17:10:21,997 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-27 17:10:22,008 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 17:10:22,716 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 662 ms. Found 7 JPA repository interfaces.
+2022-03-27 17:10:22,760 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-27 17:10:22,764 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-27 17:10:22,819 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.company.CompanyRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:10:22,824 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.lookup.LookupRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:10:22,827 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.module.AttributeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:10:22,830 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.module.ModuleRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:10:22,832 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.role.RoleRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:10:22,849 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.transaction.TransactionRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:10:22,850 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.user.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:10:22,852 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 61 ms. Found 0 Redis repository interfaces.
+2022-03-27 17:10:25,837 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2022-03-27 17:10:25,866 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2022-03-27 17:10:25,866 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-03-27 17:10:25,867 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-27 17:10:26,123 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-27 17:10:26,123 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 7988 ms
+2022-03-27 17:10:27,273 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'jwtAuthenticationFilter' configured for use
+2022-03-27 17:10:29,349 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 17:10:29,522 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.1.Final
+2022-03-27 17:10:30,137 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 17:10:30,471 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-27 17:10:31,069 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-27 17:10:31,146 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-03-27 17:10:31,708 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:10:31,731 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:10:31,733 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:10:31,735 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:10:31,736 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:10:31,765 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:10:31,767 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:10:32,169 INFO com.vladmihalcea.hibernate.type.util.Configuration [restartedMain] This framework is proudly powered by:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ _    _                           _     _
+| |  | |                         (_)   | |
+| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
+|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
+| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
+|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
+         __/ | |
+        |___/|_|
+
+At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
+
+What if there were a tool that could automatically detect JPA and Hibernate performance issues?
+
+Hypersistence Optimizer is that tool! For more details, go to: 
+
+https://vladmihalcea.com/hypersistence-optimizer/
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+2022-03-27 17:10:33,788 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 17:10:33,813 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 17:10:35,629 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 17:10:37,479 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure Ant [pattern='/v3/api-docs/**'] with []
+2022-03-27 17:10:37,480 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-03-27 17:10:37,482 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure Ant [pattern='/swagger-ui/**'] with []
+2022-03-27 17:10:40,781 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-27 17:10:40,897 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@753acaea, org.springframework.security.web.context.SecurityContextPersistenceFilter@4974d1c2, org.springframework.security.web.header.HeaderWriterFilter@19bd934a, org.springframework.web.filter.CorsFilter@42f92808, org.springframework.security.web.authentication.logout.LogoutFilter@26f5b56a, com.jst.rapidapp.configurations.JwtAuthenticationFilter@79a7bf42, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e9057d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c7fb1c1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@452d3185, org.springframework.security.web.session.SessionManagementFilter@59192f2, org.springframework.security.web.access.ExceptionTranslationFilter@484830a0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32493c7d]
+2022-03-27 17:10:43,034 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-27 17:10:43,160 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2022-03-27 17:10:43,280 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2022-03-27 17:10:43,423 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RapidappApplication in 27.218 seconds (JVM running for 30.941)
+2022-03-27 17:10:55,511 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 17:10:55,514 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-03-27 17:10:55,518 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 4 ms
+2022-03-27 17:11:04,216 INFO com.jst.rapidapp.utils.aop.AOPUtility [http-nio-8082-exec-3] #ReqProcessStart =>ResponseEntity com.jst.rapidapp.controllers.configuration.AuthenticationController.generateAuthenticationJwtToken(AuthenticationRequest)#Params => [com.jst.rapidapp.beans.configuration.AuthenticationRequest@67a52b6d]
+2022-03-27 17:11:04,641 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] select user0_.user_id as user_id1_7_, user0_.age as age2_7_, user0_.last_name as last_nam3_7_, user0_.password as password4_7_, user0_.user_email as user_ema5_7_, user0_.user_name as user_nam6_7_, user0_.user_type as user_typ7_7_ from user user0_ where user0_.user_name=?
+2022-03-27 17:11:04,641 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] select user0_.user_id as user_id1_7_, user0_.age as age2_7_, user0_.last_name as last_nam3_7_, user0_.password as password4_7_, user0_.user_email as user_ema5_7_, user0_.user_name as user_nam6_7_, user0_.user_type as user_typ7_7_ from user user0_ where user0_.user_name=?
+2022-03-27 17:11:04,696 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] select roles0_.user_id as user_id1_8_0_, roles0_.role_id as role_id2_8_0_, role1_.role_id as role_id1_6_1_, role1_.active as active2_6_1_, role1_.allow_auth as allow_au3_6_1_, role1_.allow_delete as allow_de4_6_1_, role1_.allow_edit as allow_ed5_6_1_, role1_.allow_new as allow_ne6_6_1_, role1_.allow_view as allow_vi7_6_1_, role1_.created_by as created_8_6_1_, role1_.created_dt as created_9_6_1_, role1_.role_desc as role_de10_6_1_, role1_.status as status11_6_1_, role1_.status_by as status_12_6_1_, role1_.status_dt as status_13_6_1_ from users_roles roles0_ inner join role_master role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2022-03-27 17:11:04,696 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] select roles0_.user_id as user_id1_8_0_, roles0_.role_id as role_id2_8_0_, role1_.role_id as role_id1_6_1_, role1_.active as active2_6_1_, role1_.allow_auth as allow_au3_6_1_, role1_.allow_delete as allow_de4_6_1_, role1_.allow_edit as allow_ed5_6_1_, role1_.allow_new as allow_ne6_6_1_, role1_.allow_view as allow_vi7_6_1_, role1_.created_by as created_8_6_1_, role1_.created_dt as created_9_6_1_, role1_.role_desc as role_de10_6_1_, role1_.status as status11_6_1_, role1_.status_by as status_12_6_1_, role1_.status_dt as status_13_6_1_ from users_roles roles0_ inner join role_master role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2022-03-27 17:11:04,965 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] select user0_.user_id as user_id1_7_, user0_.age as age2_7_, user0_.last_name as last_nam3_7_, user0_.password as password4_7_, user0_.user_email as user_ema5_7_, user0_.user_name as user_nam6_7_, user0_.user_type as user_typ7_7_ from user user0_ where user0_.user_name=?
+2022-03-27 17:11:04,965 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] select user0_.user_id as user_id1_7_, user0_.age as age2_7_, user0_.last_name as last_nam3_7_, user0_.password as password4_7_, user0_.user_email as user_ema5_7_, user0_.user_name as user_nam6_7_, user0_.user_type as user_typ7_7_ from user user0_ where user0_.user_name=?
+2022-03-27 17:11:05,051 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] select company0_.company_id as company_1_0_0_, company0_.company_name as company_2_0_0_, company0_.company_user as company_3_0_0_, company0_.is_active as is_activ4_0_0_, company0_.status as status5_0_0_ from company company0_ where company0_.company_id=?
+2022-03-27 17:11:05,051 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] select company0_.company_id as company_1_0_0_, company0_.company_name as company_2_0_0_, company0_.company_user as company_3_0_0_, company0_.is_active as is_activ4_0_0_, company0_.status as status5_0_0_ from company company0_ where company0_.company_id=?
+2022-03-27 17:11:07,119 INFO com.jst.rapidapp.utils.aop.AOPUtility [http-nio-8082-exec-4] #ReqProcessStart =>ResponseEntity com.jst.rapidapp.controllers.lookup.LookupController.getAllLookupMaster()#Params => []
+2022-03-27 17:11:07,142 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-4] select lookupmast0_.look_id as look_id1_1_, lookupmast0_.company_id as company_2_1_, lookupmast0_.is_active as is_activ3_1_, lookupmast0_.look_desc as look_des4_1_, lookupmast0_.look_ref_id as look_ref5_1_, lookupmast0_.status as status6_1_ from lookup_master lookupmast0_
+2022-03-27 17:11:07,142 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-4] select lookupmast0_.look_id as look_id1_1_, lookupmast0_.company_id as company_2_1_, lookupmast0_.is_active as is_activ3_1_, lookupmast0_.look_desc as look_des4_1_, lookupmast0_.look_ref_id as look_ref5_1_, lookupmast0_.status as status6_1_ from lookup_master lookupmast0_
+2022-03-27 17:18:47,926 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 17:18:47,935 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-03-27 17:18:47,953 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-03-27 17:18:54,909 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RapidappApplication using Java 11.0.8 on DESKTOP-1NEGNVM with PID 35152 (D:\Proffesional\Academics\DKIT\SOFTWARE PROJECT\rapidapp\target\classes started by sreek in D:\Proffesional\Academics\DKIT\SOFTWARE PROJECT\rapidapp)
+2022-03-27 17:18:54,912 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.1, Spring v5.3.13
+2022-03-27 17:18:54,912 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-27 17:18:55,079 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-27 17:18:55,080 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-27 17:18:58,795 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-27 17:18:58,809 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 17:18:59,870 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 1013 ms. Found 7 JPA repository interfaces.
+2022-03-27 17:18:59,933 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-27 17:18:59,942 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-27 17:19:00,050 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.company.CompanyRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:19:00,056 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.lookup.LookupRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:19:00,059 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.module.AttributeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:19:00,061 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.module.ModuleRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:19:00,063 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.role.RoleRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:19:00,098 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.transaction.TransactionRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:19:00,105 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.user.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:19:00,106 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 126 ms. Found 0 Redis repository interfaces.
+2022-03-27 17:19:05,091 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2022-03-27 17:19:05,134 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2022-03-27 17:19:05,136 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-03-27 17:19:05,137 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-27 17:19:05,588 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-27 17:19:05,589 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 10508 ms
+2022-03-27 17:19:06,437 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'jwtAuthenticationFilter' configured for use
+2022-03-27 17:19:08,020 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 17:19:08,228 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.1.Final
+2022-03-27 17:19:08,932 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 17:19:09,337 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-27 17:19:10,214 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-27 17:19:10,302 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-03-27 17:19:10,973 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:19:10,992 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:19:10,994 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:19:10,995 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:19:10,996 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:19:11,019 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:19:11,020 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:19:11,386 INFO com.vladmihalcea.hibernate.type.util.Configuration [restartedMain] This framework is proudly powered by:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ _    _                           _     _
+| |  | |                         (_)   | |
+| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
+|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
+| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
+|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
+         __/ | |
+        |___/|_|
+
+At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
+
+What if there were a tool that could automatically detect JPA and Hibernate performance issues?
+
+Hypersistence Optimizer is that tool! For more details, go to: 
+
+https://vladmihalcea.com/hypersistence-optimizer/
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+2022-03-27 17:19:12,904 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 17:19:12,929 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 17:19:14,936 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 17:19:15,781 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lookupController': Unsatisfied dependency expressed through field 'lookupService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lookupServiceImpl': Unsatisfied dependency expressed through field 'lookupDAO'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lookupDao': Unsatisfied dependency expressed through field 'lookupRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lookupRepository' defined in com.jst.rapidapp.repository.lookup.LookupRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)! Reason: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!
+2022-03-27 17:19:15,788 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 17:19:15,796 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-27 17:19:15,825 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-27 17:19:15,887 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2022-03-27 17:19:15,940 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-27 17:19:16,025 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lookupController': Unsatisfied dependency expressed through field 'lookupService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lookupServiceImpl': Unsatisfied dependency expressed through field 'lookupDAO'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lookupDao': Unsatisfied dependency expressed through field 'lookupRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lookupRepository' defined in com.jst.rapidapp.repository.lookup.LookupRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)! Reason: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.jst.rapidapp.RapidappApplication.main(RapidappApplication.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lookupServiceImpl': Unsatisfied dependency expressed through field 'lookupDAO'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lookupDao': Unsatisfied dependency expressed through field 'lookupRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lookupRepository' defined in com.jst.rapidapp.repository.lookup.LookupRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)! Reason: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lookupDao': Unsatisfied dependency expressed through field 'lookupRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lookupRepository' defined in com.jst.rapidapp.repository.lookup.LookupRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)! Reason: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 39 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'lookupRepository' defined in com.jst.rapidapp.repository.lookup.LookupRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)! Reason: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 53 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)! Reason: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:364)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:322)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:328)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 63 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract java.util.List com.jst.rapidapp.repository.lookup.LookupRepository.findDistinctLookupRefs(long)!
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:66)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:51)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:163)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:252)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:87)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 85 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.hibernate.hql.internal.ast.QuerySyntaxException: lookup_master is not mapped [SELECT DISTINCT lookRefId FROM lookup_master WHERE companyId  = :companyId]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:743)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at com.sun.proxy.$Proxy153.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:90)
+	... 91 common frames omitted
+Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: lookup_master is not mapped [SELECT DISTINCT lookRefId FROM lookup_master WHERE companyId  = :companyId]
+	at org.hibernate.hql.internal.ast.QuerySyntaxException.generateQueryException(QuerySyntaxException.java:79)
+	at org.hibernate.QueryException.wrapWithQueryString(QueryException.java:103)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:220)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:622)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:734)
+	... 99 common frames omitted
+Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: lookup_master is not mapped
+	at org.hibernate.hql.internal.ast.util.SessionFactoryHelper.requireClassPersister(SessionFactoryHelper.java:169)
+	at org.hibernate.hql.internal.ast.tree.FromElementFactory.addFromElement(FromElementFactory.java:91)
+	at org.hibernate.hql.internal.ast.tree.FromClause.addFromElement(FromClause.java:77)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.createFromElement(HqlSqlWalker.java:333)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElement(HqlSqlBaseWalker.java:3765)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElementList(HqlSqlBaseWalker.java:3654)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromClause(HqlSqlBaseWalker.java:737)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:593)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:330)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:278)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	... 105 common frames omitted
+2022-03-27 17:20:18,510 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RapidappApplication using Java 11.0.8 on DESKTOP-1NEGNVM with PID 34372 (D:\Proffesional\Academics\DKIT\SOFTWARE PROJECT\rapidapp\target\classes started by sreek in D:\Proffesional\Academics\DKIT\SOFTWARE PROJECT\rapidapp)
+2022-03-27 17:20:18,513 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.6.1, Spring v5.3.13
+2022-03-27 17:20:18,514 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-27 17:20:18,708 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-27 17:20:18,709 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-27 17:20:22,232 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-27 17:20:22,236 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 17:20:23,131 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 872 ms. Found 7 JPA repository interfaces.
+2022-03-27 17:20:23,167 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-27 17:20:23,170 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-27 17:20:23,215 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.company.CompanyRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:20:23,219 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.lookup.LookupRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:20:23,222 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.module.AttributeRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:20:23,224 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.module.ModuleRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:20:23,227 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.role.RoleRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:20:23,238 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.transaction.TransactionRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:20:23,240 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jst.rapidapp.repository.user.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-27 17:20:23,240 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+2022-03-27 17:20:30,283 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2022-03-27 17:20:30,341 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2022-03-27 17:20:30,342 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-03-27 17:20:30,345 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-03-27 17:20:31,304 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-27 17:20:31,305 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 12595 ms
+2022-03-27 17:20:32,701 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'jwtAuthenticationFilter' configured for use
+2022-03-27 17:20:33,891 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 17:20:34,026 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.1.Final
+2022-03-27 17:20:34,386 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 17:20:34,676 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-27 17:20:35,196 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-27 17:20:35,258 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-03-27 17:20:35,713 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:20:35,725 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:20:35,725 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:20:35,726 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:20:35,728 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:20:35,744 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:20:35,745 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2022-03-27 17:20:35,943 INFO com.vladmihalcea.hibernate.type.util.Configuration [restartedMain] This framework is proudly powered by:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ _    _                           _     _
+| |  | |                         (_)   | |
+| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
+|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
+| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
+|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
+         __/ | |
+        |___/|_|
+
+At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
+
+What if there were a tool that could automatically detect JPA and Hibernate performance issues?
+
+Hypersistence Optimizer is that tool! For more details, go to: 
+
+https://vladmihalcea.com/hypersistence-optimizer/
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+2022-03-27 17:20:36,874 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 17:20:36,904 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 17:20:38,172 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 17:20:39,906 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure Ant [pattern='/v3/api-docs/**'] with []
+2022-03-27 17:20:39,907 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-03-27 17:20:39,908 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure Ant [pattern='/swagger-ui/**'] with []
+2022-03-27 17:20:42,816 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-27 17:20:42,900 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4417ae0a, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b4e6eca, org.springframework.security.web.header.HeaderWriterFilter@2ccf44da, org.springframework.web.filter.CorsFilter@3699d215, org.springframework.security.web.authentication.logout.LogoutFilter@2c2327b5, com.jst.rapidapp.configurations.JwtAuthenticationFilter@1e062ee6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6dae88e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5824854f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6babb87e, org.springframework.security.web.session.SessionManagementFilter@7a5b0a50, org.springframework.security.web.access.ExceptionTranslationFilter@30318532, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c51e391]
+2022-03-27 17:20:44,538 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-27 17:20:44,613 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2022-03-27 17:20:44,691 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2022-03-27 17:20:44,752 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RapidappApplication in 27.223 seconds (JVM running for 28.665)
+2022-03-27 17:20:56,809 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 17:20:56,811 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-03-27 17:20:56,815 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 3 ms
+2022-03-27 17:20:57,293 INFO com.jst.rapidapp.utils.aop.AOPUtility [http-nio-8082-exec-1] #ReqProcessStart =>ResponseEntity com.jst.rapidapp.controllers.lookup.LookupController.getAllLookupMaster(long)#Params => [1]
+2022-03-27 17:20:57,361 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-1] select distinct lookupmast0_.look_ref_id as col_0_0_ from lookup_master lookupmast0_ where lookupmast0_.company_id=?
+2022-03-27 17:20:57,361 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-1] select distinct lookupmast0_.look_ref_id as col_0_0_ from lookup_master lookupmast0_ where lookupmast0_.company_id=?
+2022-03-27 17:21:09,287 INFO com.jst.rapidapp.utils.aop.AOPUtility [http-nio-8082-exec-3] #ReqProcessStart =>ResponseEntity com.jst.rapidapp.controllers.lookup.LookupController.saveLookupMaster(LookupMaster)#Params => [com.jst.rapidapp.beans.LookupMaster@2b1c83db]
+2022-03-27 17:21:09,343 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] select tbl.next_val from hibernate_sequences tbl where tbl.sequence_name=? for update
+2022-03-27 17:21:09,343 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] select tbl.next_val from hibernate_sequences tbl where tbl.sequence_name=? for update
+2022-03-27 17:21:09,359 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] update hibernate_sequences set next_val=?  where next_val=? and sequence_name=?
+2022-03-27 17:21:09,359 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] update hibernate_sequences set next_val=?  where next_val=? and sequence_name=?
+2022-03-27 17:21:09,449 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] insert into lookup_master (company_id, is_active, look_desc, look_ref_id, status, look_id) values (?, ?, ?, ?, ?, ?)
+2022-03-27 17:21:09,449 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-3] insert into lookup_master (company_id, is_active, look_desc, look_ref_id, status, look_id) values (?, ?, ?, ?, ?, ?)
+2022-03-27 17:21:11,559 INFO com.jst.rapidapp.utils.aop.AOPUtility [http-nio-8082-exec-4] #ReqProcessStart =>ResponseEntity com.jst.rapidapp.controllers.lookup.LookupController.getAllLookupMaster(long)#Params => [1]
+2022-03-27 17:21:11,560 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-4] select distinct lookupmast0_.look_ref_id as col_0_0_ from lookup_master lookupmast0_ where lookupmast0_.company_id=?
+2022-03-27 17:21:11,560 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8082-exec-4] select distinct lookupmast0_.look_ref_id as col_0_0_ from lookup_master lookupmast0_ where lookupmast0_.company_id=?
+2022-03-27 19:56:55,751 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h9m20s97ms16µs101ns).
+2022-03-27 23:18:56,906 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h30s719ms518µs400ns).

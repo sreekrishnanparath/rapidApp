@@ -4,6 +4,7 @@ package com.jst.rapidapp.repository.transaction;
 import com.jst.rapidapp.beans.Company;
 import com.jst.rapidapp.beans.RapidTransactions;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

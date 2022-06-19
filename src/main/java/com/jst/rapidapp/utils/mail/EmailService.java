@@ -1,4 +1,4 @@
-package com.jst.rapidapp.utils.commonConstants.mail;
+package com.jst.rapidapp.utils.mail;
 
 import com.jst.rapidapp.beans.RapidTransactions;
 import org.springframework.beans.factory.annotation.Autowired;

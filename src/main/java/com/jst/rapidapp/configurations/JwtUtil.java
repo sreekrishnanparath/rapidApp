@@ -10,6 +10,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import java.nio.charset.Charset;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -41,7 +42,7 @@ public class JwtUtil {
         System.out.println("jwtSecret## " + jwtSecret);
         System.out.println("jwtExpirationTime## " + jwtExpirationTime);
         return Jwts.builder().setClaims(claims).setSubject(userName).setIssuedAt(new Date())
-                .setExpiration(new Date((new Date()).getTime() + jwtExpirationTime))
+                .setExpiration(new Date(System.currentTimeMillis() + jwtExpirationTime))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret).compact();
     }
 

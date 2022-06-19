@@ -55,4 +55,9 @@ public class ModuleController {
     {
         return new ResponseEntity<ModuleMaster>(moduleService.updateModule(moduleId,module), HttpStatus.OK);
     }
+
+    @PostMapping("/trans/{companyId}")
+    public ResponseEntity <List<ModuleMaster>> findAllModulesTransCount(@PathVariable long companyId){
+        return new ResponseEntity<List<ModuleMaster>>(moduleService.findAllModulesTransCount(),HttpStatus.OK);
+    }
 }

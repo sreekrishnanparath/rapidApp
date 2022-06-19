@@ -42,7 +42,7 @@ public class UserController {
         if(user==null){
             throw new NoDataFoundException("User Not Found!");
         }
-        return new GenericResponse<User>(HttpStatus.CREATED,user,"");
+        return new GenericResponse<User>(HttpStatus.CREATED,user,"","");
     }
 
     @GetMapping("/{userEmail}")

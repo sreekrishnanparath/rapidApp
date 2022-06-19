@@ -6,11 +6,14 @@ public class GenericResponse<T> {
     private HttpStatus status;
     private String responseTime;
     private T result;
+    private String environment;
 
-    public GenericResponse(HttpStatus status, T response,String responseTime) {
+
+    public GenericResponse(HttpStatus status, T response,String responseTime, String environment) {
         this.status = status;
         this.responseTime = responseTime;
         this.result = response;
+        this.environment = environment;
     }
 
     public GenericResponse() {
@@ -40,5 +43,11 @@ public class GenericResponse<T> {
         this.result = result;
     }
 
+    public String getEnvironment() {
+        return environment;
+    }
 
+    public void setEnvironment(String environment) {
+        this.environment = environment;
+    }
 }

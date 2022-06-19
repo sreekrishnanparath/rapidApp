@@ -45,4 +45,8 @@ public class ModuleDAO {
         return moduleRepository.saveAndFlush(exisingModule);
 
     }
+
+    public List<ModuleMaster> findAllModulesTransCount() {
+        return moduleRepository.findAllModulesTransCount();
+    }
 }

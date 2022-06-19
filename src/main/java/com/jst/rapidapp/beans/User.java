@@ -32,7 +32,6 @@ public class User {
     private String userEmail;
 
     //0-individual 1-cooperate
-
     private int userType;
 
     @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)

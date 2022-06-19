@@ -59,4 +59,9 @@ public class ModuleServiceImpl implements ModuleService{
         return moduleDAO.updateModule(id,module);
     }
 
+    @Override
+    public List<ModuleMaster> findAllModulesTransCount() {
+        return moduleDAO.findAllModulesTransCount();
+    }
+
 }
