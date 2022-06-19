@@ -1,7 +1,6 @@
 package com.jst.rapidapp.repository.invoice;
 
 import com.jst.rapidapp.beans.InvoiceHeader;
-import com.jst.rapidapp.beans.ItemMaster;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -14,11 +14,10 @@ import java.util.Date;
 @Entity
 @Table(name="invoice_details")
 public class InvoiceDetails {
+
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE)
     private long lineId ;
-
-    private long transId ;//FK
 
     private Date transDt;
 
