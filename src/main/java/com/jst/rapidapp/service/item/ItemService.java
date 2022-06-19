@@ -2,15 +2,16 @@ package com.jst.rapidapp.service.item;
 
 
 import com.jst.rapidapp.beans.ItemMaster;
+import com.jst.rapidapp.beans.ProductMaster;
 
 import java.util.List;
 
 public interface ItemService {
 
-    public ItemMaster createItemMaster(ItemMaster itemMaster);
-    public void deleteItemMaster(long id);
-    public ItemMaster getItemMasterById(long id);
-    public List<ItemMaster> getItemMasterList();
-    public void updateItemMaster(long id, ItemMaster itemMaster);
+    ItemMaster createItemMaster(ItemMaster itemMaster, ProductMaster productMaster);
+    void deleteItemMaster(long id);
+    ItemMaster getItemMasterById(long id);
+    List<ItemMaster> getItemMasterList();
+    void updateItemMaster(long id, ItemMaster itemMaster);
 
 }
