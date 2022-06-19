@@ -21,8 +21,6 @@ public class ItemMaster {
 
     private long itemClassId ;
 
-    private long productId;
-
     private long branchId;
 
     private double cost;
@@ -46,5 +44,10 @@ public class ItemMaster {
 
     @CreationTimestamp
     private LocalDateTime createdDate;
+
+    @ManyToOne()
+    @JoinColumn(name = "product_id", nullable = false)
+    private ProductMaster product;
+
 
 }
