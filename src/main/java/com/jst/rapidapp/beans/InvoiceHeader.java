@@ -1,9 +1,12 @@
 package com.jst.rapidapp.beans;
 
+import io.lettuce.core.support.caching.CacheAccessor;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -41,8 +44,8 @@ public class InvoiceHeader {
 
     private LocalDateTime transTime;
 
-    @OneToMany()
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "trans_id", nullable = false)
-    private List<InvoiceDetails> invoiceDetailsList;
+    private List<InvoiceDetails> invoiceDetails = new ArrayList<InvoiceDetails>();
 
 }

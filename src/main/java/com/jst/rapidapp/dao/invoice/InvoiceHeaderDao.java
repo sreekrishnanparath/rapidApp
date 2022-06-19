@@ -20,18 +20,7 @@ public class InvoiceHeaderDao {
     InvoiceDetailsRepository invoiceDetailsRepository;
 
     public InvoiceHeader createInvoiceHeader(InvoiceHeader invoiceHeader) {
-
-        InvoiceHeader invoiceHeaderResponse = invoiceHeaderRepository.saveAndFlush(invoiceHeader);
-
-//        List<InvoiceDetails> invoiceDetails = invoiceHeader.getInvoiceDetailsList();
-//        if(invoiceDetails.size() > 0 ){
-//            for(InvoiceDetails invoiceDetail : invoiceDetails){
-//                invoiceDetail.s
-//                invoiceDetailsRepository.saveAndFlush(invoiceDetail);
-//            }
-//        }
-        invoiceHeader.setStatus("CREATED");
-        return invoiceHeaderResponse;
+        return invoiceHeaderRepository.saveAndFlush(invoiceHeader);
     }
 
 

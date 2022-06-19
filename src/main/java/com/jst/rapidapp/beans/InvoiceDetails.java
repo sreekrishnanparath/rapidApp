@@ -39,5 +39,5 @@ public class InvoiceDetails {
 
     private String statusBy;
 
-
+    
 }
