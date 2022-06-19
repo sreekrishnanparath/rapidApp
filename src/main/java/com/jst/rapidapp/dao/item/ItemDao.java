@@ -3,6 +3,7 @@ package com.jst.rapidapp.dao.item;
 import com.jst.rapidapp.beans.ItemMaster;
 import com.jst.rapidapp.beans.ProductMaster;
 import com.jst.rapidapp.repository.item.ItemRepository;
+import com.jst.rapidapp.repository.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,8 +14,12 @@ public class ItemDao {
     @Autowired
     ItemRepository itemRepository;
 
+    @Autowired
+    ProductRepository productRepository;
 
-    public ItemMaster createItemMaster(ItemMaster itemMaster, ProductMaster productMaster) {
+
+    public ItemMaster createItemMaster(ItemMaster itemMaster, long productId) {
+        ProductMaster productMaster = productRepository.findById(productId);
         itemMaster.setProduct(productMaster);
         itemMaster.setStatus("CREATED");
         return itemRepository.saveAndFlush(itemMaster);

@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ItemService {
 
-    ItemMaster createItemMaster(ItemMaster itemMaster, ProductMaster productMaster);
+    ItemMaster createItemMaster(ItemMaster itemMaster, long productId);
     void deleteItemMaster(long id);
     ItemMaster getItemMasterById(long id);
     List<ItemMaster> getItemMasterList();
